@@ -1,14 +1,14 @@
 :root {
-  --bg: #0c1116;
-  --bg-2: #121a22;
-  --bg-3: #1a2430;
-  --card: #121a22;
-  --text: #f2f5f7;
-  --muted: #a7b2be;
-  --accent: #4c7db5;
-  --accent-2: #7da3c9;
-  --line: rgba(255, 255, 255, 0.08);
-  --glow: rgba(76, 125, 181, 0.4);
+  --bg: #1B2B48;
+  --bg-2: #1e3154;
+  --bg-3: #243a63;
+  --card: #203455;
+  --text: #F3F4F5;
+  --muted: #D1D5DA;
+  --accent: #4A7DBC;
+  --accent-2: #F58A34;
+  --line: rgba(243, 244, 245, 0.12);
+  --glow: rgba(74, 125, 188, 0.45);
   --max: 1200px;
   font-family: "Inter", "Montserrat", system-ui, -apple-system, sans-serif;
 }
