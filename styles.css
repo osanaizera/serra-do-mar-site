@@ -100,6 +100,31 @@ img { max-width: 100%; display: block; }
   padding: 5.5rem 0 4rem;
 }
 
+.full-bleed {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  isolation: isolate;
+}
+
+.full-bleed::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(12, 17, 22, 0.9), rgba(12, 17, 22, 0.55));
+  z-index: -1;
+}
+
+.full-bleed .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-image { background-image: url("assets/hero.jpg"); }
+.infra-image { background-image: url("assets/infra.jpg"); }
+.strata-image { background-image: url("assets/strata.jpg"); }
+
 .hero-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
