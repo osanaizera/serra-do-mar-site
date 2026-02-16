@@ -58,8 +58,9 @@ img { max-width: 100%; display: block; }
 }
 
 .brand img {
-  width: 36px;
-  height: 36px;
+  height: 38px;
+  width: auto;
+  border-radius: 8px;
 }
 
 .nav-links {
