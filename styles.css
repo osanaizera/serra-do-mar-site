@@ -5,8 +5,9 @@
   --card: #203455;
   --text: #F3F4F5;
   --muted: #D1D5DA;
-  --accent: #4A7DBC;
-  --accent-2: #F58A34;
+  --accent: #4A7DBC;       /* light blue */
+  --accent-2: #F58A34;     /* orange */
+  --accent-3: #368967;     /* green */
   --line: rgba(243, 244, 245, 0.12);
   --glow: rgba(74, 125, 188, 0.45);
   --max: 1200px;
@@ -84,12 +85,12 @@ img { max-width: 100%; display: block; }
 .btn.primary {
   background: var(--accent);
   color: #0b1116;
-  box-shadow: 0 8px 24px rgba(76, 125, 181, 0.3);
+  box-shadow: 0 8px 24px rgba(74, 125, 188, 0.35);
 }
 
 .btn.primary:hover {
   transform: translateY(-1px);
-  box-shadow: 0 12px 28px rgba(76, 125, 181, 0.5);
+  box-shadow: 0 12px 28px rgba(245, 138, 52, 0.25);
 }
 
 .btn.ghost {
@@ -139,8 +140,9 @@ img { max-width: 100%; display: block; }
   gap: 0.5rem;
   padding: 0.4rem 0.9rem;
   border-radius: 999px;
-  background: rgba(76, 125, 181, 0.18);
-  color: var(--accent-2);
+  background: rgba(74, 125, 188, 0.2);
+  color: #E6EEF7;
+  border: 1px solid rgba(74, 125, 188, 0.25);
   font-size: 0.85rem;
   letter-spacing: 0.05em;
 }
@@ -163,8 +165,8 @@ img { max-width: 100%; display: block; }
 }
 
 .hero-card {
-  background: linear-gradient(135deg, rgba(76,125,181,0.2), rgba(18,26,34,0.8));
-  border: 1px solid var(--line);
+  background: linear-gradient(135deg, rgba(74,125,188,0.22), rgba(18,26,34,0.8));
+  border: 1px solid rgba(74,125,188,0.25);
   border-radius: 24px;
   padding: 2rem;
   position: relative;
@@ -175,7 +177,7 @@ img { max-width: 100%; display: block; }
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 70% 20%, rgba(125,163,201,0.35), transparent 60%);
+  background: radial-gradient(circle at 70% 20%, rgba(74,125,188,0.35), rgba(245,138,52,0.15) 40%, transparent 60%);
   opacity: 0.7;
   pointer-events: none;
 }
@@ -230,7 +232,7 @@ img { max-width: 100%; display: block; }
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, rgba(76,125,181,0.12), transparent 50%);
+  background: linear-gradient(120deg, rgba(74,125,188,0.14), rgba(245,138,52,0.08) 45%, transparent 60%);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -247,8 +249,8 @@ img { max-width: 100%; display: block; }
   display: inline-flex;
   padding: 0.25rem 0.6rem;
   border-radius: 999px;
-  background: rgba(255,255,255,0.06);
-  color: var(--muted);
+  background: rgba(54, 137, 103, 0.18);
+  color: #DDEDE6;
   font-size: 0.75rem;
 }
 
@@ -281,11 +283,11 @@ img { max-width: 100%; display: block; }
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: var(--accent);
+  background: var(--accent-3);
   position: absolute;
   left: -1.9rem;
   top: 0.35rem;
-  box-shadow: 0 0 12px var(--glow);
+  box-shadow: 0 0 12px rgba(54, 137, 103, 0.45);
 }
 
 .layer-graphic {
@@ -313,7 +315,7 @@ img { max-width: 100%; display: block; }
 .layer:nth-child(4) { width: 55%; }
 
 .cta {
-  background: linear-gradient(135deg, rgba(76,125,181,0.35), rgba(18,26,34,0.9));
+  background: linear-gradient(135deg, rgba(74,125,188,0.35), rgba(54,137,103,0.18), rgba(18,26,34,0.9));
   border: 1px solid var(--line);
   border-radius: 24px;
   padding: 2.4rem;
