@@ -376,9 +376,9 @@ h2 { font-weight: 700; }
 .hero h1 {
   font-family: "Syne", sans-serif;
   font-weight: 800;
-  font-size: clamp(2.8rem, 6vw, 5rem);
-  line-height: 1.15;
-  margin: 0 0 1.5rem;
+  font-size: clamp(2rem, 5vw, 4.5rem);
+  line-height: 1.1;
+  margin: 0 0 1.25rem;
 }
 
 .accent-line {
@@ -504,16 +504,23 @@ h2 { font-weight: 700; }
 @media (max-width: 900px) {
   .hero-grid {
     grid-template-columns: 1fr;
-    padding: 5rem 0 2rem;
+    padding: 5.5rem 0 3rem;
+    height: auto;
   }
-  
+
+  .hero {
+    height: auto;
+    min-height: 100svh;
+  }
+
   .hero-card {
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
   }
-  
+
   .stats-row {
     justify-content: center;
     text-align: center;
+    gap: 1rem;
   }
 }
 
@@ -991,9 +998,141 @@ select option {
 /* ============================================================
    Responsive
    ============================================================ */
+
+/* --- MOBILE ≤ 600px --- */
 @media (max-width: 600px) {
-  .hero { padding-top: 3.5rem; }
-  .hero-card { padding: 1.5rem; }
+  /* Hero */
+  .hero {
+    height: auto;
+    min-height: 100svh;
+    padding-top: 0;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    padding: 5.5rem 0 2rem;
+    gap: 2rem;
+    height: auto;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 8vw, 2.8rem);
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .hero-card {
+    padding: 1.25rem;
+    margin-top: 0;
+    border-radius: 16px;
+  }
+
+  .metric {
+    gap: 0.75rem;
+    padding: 0.75rem 0;
+  }
+
+  .metric strong {
+    font-size: 0.95rem;
+  }
+
+  .metric-detail {
+    font-size: 0.82rem;
+  }
+
+  .hero-footer {
+    display: none; /* oculta stats em mobile — muito apertado */
+  }
+
+  /* Sections */
   .form-row { grid-template-columns: 1fr; }
-  .section { padding: 3rem 0; }
+  .section { padding: 2.5rem 0; }
+
+  /* Grid 3 colunas → 1 coluna */
+  .grid.three {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Split sections → 1 coluna */
+  .split {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  /* Layer graphic */
+  .layer-graphic {
+    display: none;
+  }
+
+  /* Highlight cards */
+  .highlight {
+    grid-template-columns: 1fr;
+  }
+
+  /* Typography ajustes */
+  h2 {
+    font-size: clamp(1.6rem, 6vw, 2rem);
+  }
+
+  /* Nav */
+  .brand span {
+    display: none; /* esconde texto da marca no mobile, fica só o logo */
+  }
+
+  /* Técnico SVG grid — desativa no mobile para performance */
+  .hero-bg-grid {
+    display: none;
+  }
+}
+
+/* --- TABLET 601px – 900px --- */
+@media (min-width: 601px) and (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    padding: 5.5rem 0 3rem;
+    gap: 2.5rem;
+    height: auto;
+  }
+
+  .hero {
+    height: auto;
+    min-height: 100svh;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+  }
+
+  .hero-actions {
+    flex-wrap: wrap;
+  }
+
+  .grid.three {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .split {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .layer-graphic {
+    display: none;
+  }
 }
