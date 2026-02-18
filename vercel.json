@@ -1,0 +1,8 @@
+{
+  "name": "serra-do-mar-site",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "github": {
+    "enabled": true
+  }
+}
