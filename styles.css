@@ -844,35 +844,56 @@ h2 { font-weight: 700; }
   inset: 0;
   background-size: cover;
   background-position: center;
-  opacity: 0.18;
-  z-index: -1;
+  opacity: 0.22;
+  z-index: 0;
   transition: opacity 0.25s cubic-bezier(0.2, 0, 0.38, 0.9);
+  pointer-events: none;
 }
 
-/* Fotos reais de solo como fundo dos cards */
+/* Fotos reais de solo como fundo dos cards — com overlay escuro embutido */
 .grid.three .card:nth-child(1)::before {
-  background-image: url('assets/soil-photo-1.jpg');
+  background-image:
+    linear-gradient(160deg, rgba(15,23,42,0.72) 0%, rgba(27,43,72,0.5) 100%),
+    url('assets/soil-photo-1.jpg');
   background-size: cover;
   background-position: center;
-  opacity: 0.22;
+  opacity: 1;
 }
 
 .grid.three .card:nth-child(2)::before {
-  background-image: url('assets/soil-photo-2.jpg');
+  background-image:
+    linear-gradient(160deg, rgba(15,23,42,0.72) 0%, rgba(27,43,72,0.5) 100%),
+    url('assets/soil-photo-2.jpg');
   background-size: cover;
   background-position: center;
-  opacity: 0.22;
+  opacity: 1;
 }
 
 .grid.three .card:nth-child(3)::before {
-  background-image: url('assets/soil-photo-3.jpg');
+  background-image:
+    linear-gradient(160deg, rgba(15,23,42,0.72) 0%, rgba(27,43,72,0.5) 100%),
+    url('assets/soil-photo-3.jpg');
   background-size: cover;
   background-position: center;
-  opacity: 0.22;
+  opacity: 1;
 }
 
 .grid.three .card:hover::before {
-  opacity: 0.35;
+  background-image:
+    linear-gradient(160deg, rgba(15,23,42,0.55) 0%, rgba(27,43,72,0.35) 100%),
+    url('assets/soil-photo-1.jpg');
+}
+
+.grid.three .card:nth-child(2):hover::before {
+  background-image:
+    linear-gradient(160deg, rgba(15,23,42,0.55) 0%, rgba(27,43,72,0.35) 100%),
+    url('assets/soil-photo-2.jpg');
+}
+
+.grid.three .card:nth-child(3):hover::before {
+  background-image:
+    linear-gradient(160deg, rgba(15,23,42,0.55) 0%, rgba(27,43,72,0.35) 100%),
+    url('assets/soil-photo-3.jpg');
 }
 
 /* Números de ordem para cards de serviço */
@@ -940,6 +961,19 @@ h2 { font-weight: 700; }
   position: relative;
   z-index: 2;
   padding-left: 8px;
+}
+
+.card p,
+.card .tag,
+.card span,
+.card strong {
+  position: relative;
+  z-index: 2;
+}
+
+/* Garante isolamento de stacking context */
+.grid.three .card {
+  isolation: isolate;
 }
 
 /* ============================================================
