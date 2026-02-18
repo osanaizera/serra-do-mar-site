@@ -3,19 +3,75 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Primary Meta -->
   <title>Sobre | Serra do Mar Engenharia</title>
-  <meta name="description" content="Conheça a Serra do Mar Engenharia, especialista em base e fundações para expansões seguras." />
+  <meta name="description" content="Conheça a Serra do Mar Engenharia, especialista em geotecnia e fundações para expansões seguras. Equipe liderada por Cássio Hister Bellan e Lucas França." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://serra-do-mar.vercel.app/sobre.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://serra-do-mar.vercel.app/sobre.html" />
+  <meta property="og:title"       content="Sobre | Serra do Mar Engenharia" />
+  <meta property="og:description" content="Conheça a Serra do Mar Engenharia — geotecnia e infraestrutura para expansões seguras." />
+  <meta property="og:image"       content="https://serra-do-mar.vercel.app/assets/hero.jpg" />
+  <meta property="og:image:alt"   content="Serra do Mar Engenharia — Sobre a empresa" />
+  <meta property="og:locale"      content="pt_BR" />
+  <meta property="og:site_name"   content="Serra do Mar Engenharia" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Sobre | Serra do Mar Engenharia" />
+  <meta name="twitter:description" content="Conheça a Serra do Mar Engenharia — geotecnia e infraestrutura para expansões seguras." />
+  <meta name="twitter:image"       content="https://serra-do-mar.vercel.app/assets/hero.jpg" />
+
+  <!-- Preconnect / Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" />
+
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="assets/logo.jpg" type="image/jpeg" />
+
+  <!-- Schema.org — LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://serra-do-mar.vercel.app/#localbusiness",
+    "name": "Serra do Mar Engenharia",
+    "description": "Geotecnia e infraestrutura para expansões seguras.",
+    "url": "https://serra-do-mar.vercel.app/sobre.html",
+    "logo": "https://serra-do-mar.vercel.app/assets/logo.jpg",
+    "image": "https://serra-do-mar.vercel.app/assets/hero.jpg",
+    "address": { "@type": "PostalAddress", "addressCountry": "BR" },
+    "member": [
+      { "@type": "Person", "name": "Cássio Hister Bellan", "jobTitle": "Diretor Técnico" },
+      { "@type": "Person", "name": "Lucas França", "jobTitle": "Comunicação e Coordenação" }
+    ]
+  }
+  </script>
 </head>
 <body>
+  <!-- Mobile menu overlay -->
+  <div id="mobile-menu" class="mobile-menu" role="dialog" aria-label="Menu de navegação">
+    <a href="sobre.html">Sobre</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="projetos.html">Projetos</a>
+    <a href="insights.html">Insights</a>
+    <a href="contato.html">Contato</a>
+    <a class="btn primary" href="contato.html">Agendar diagnóstico</a>
+  </div>
+
   <header class="header">
     <div class="container nav">
       <a class="brand" href="index.html">
-        <img src="assets/logo.jpg" alt="Serra do Mar" />
+        <img src="assets/logo.jpg" alt="Serra do Mar Engenharia" />
         <span>Serra do Mar Engenharia</span>
       </a>
-      <nav class="nav-links">
+      <nav class="nav-links" aria-label="Navegação principal">
         <a href="sobre.html">Sobre</a>
         <a href="servicos.html">Serviços</a>
         <a href="projetos.html">Projetos</a>
@@ -23,6 +79,9 @@
         <a href="contato.html">Contato</a>
       </nav>
       <a class="btn primary" href="contato.html">Agendar diagnóstico</a>
+      <button id="hamburger" class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
@@ -73,20 +132,25 @@
             </div>
           </div>
         </div>
-        <div class="card reveal" data-reveal>
-          <h3>Equipe e governança</h3>
-          <p>
-            Reunimos especialistas em geotecnia e infraestrutura para projetos de alta criticidade.
-            Comunicação direta, foco em segurança e credibilidade na base de cada decisão.
+
+        <!-- Team cards — reformulados -->
+        <div class="reveal" data-reveal>
+          <h3 style="font-family:'Syne',sans-serif; margin-bottom:0.5rem;">Equipe e governança</h3>
+          <p style="color:var(--muted); font-size:0.9rem; margin-bottom:1.2rem;">
+            Especialistas em geotecnia e infraestrutura para projetos de alta criticidade.
           </p>
-          <div class="grid two">
-            <div class="card">
+          <div class="team-grid">
+            <div class="team-card">
+              <div class="team-avatar blue">CB</div>
               <h4>Cássio Hister Bellan</h4>
-              <p>Direção técnica e relacionamento com grandes contas.</p>
+              <p class="role">Diretor Técnico</p>
+              <p>Direção técnica e relacionamento com grandes contas. Foco em precisão geotécnica e segurança estrutural.</p>
             </div>
-            <div class="card">
+            <div class="team-card">
+              <div class="team-avatar green">LF</div>
               <h4>Lucas França</h4>
-              <p>Ponto focal de comunicação e coordenação de projetos.</p>
+              <p class="role">Comunicação &amp; Projetos</p>
+              <p>Ponto focal de comunicação, coordenação de projetos e interface com clientes corporativos.</p>
             </div>
           </div>
         </div>

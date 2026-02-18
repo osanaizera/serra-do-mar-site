@@ -3,32 +3,108 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Serra do Mar Engenharia | Geotecnia & Infraestrutura</title>
+
+  <!-- Primary Meta -->
+  <title>Serra do Mar Engenharia | Geotecnia &amp; Infraestrutura</title>
   <meta name="description" content="Geotecnia e infraestrutura que dão base segura para projetos em expansão. Decisões com previsibilidade e autoridade técnica." />
-  <meta property="og:title" content="Serra do Mar Engenharia" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://serra-do-mar.vercel.app/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://serra-do-mar.vercel.app/" />
+  <meta property="og:title"       content="Serra do Mar Engenharia | Geotecnia &amp; Infraestrutura" />
   <meta property="og:description" content="A base técnica para expansões seguras em infraestrutura e geotecnia." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://serra-do-mar.vercel.app" />
+  <meta property="og:image"       content="https://serra-do-mar.vercel.app/assets/hero.jpg" />
+  <meta property="og:image:alt"   content="Serra do Mar Engenharia — Geotecnia e Infraestrutura" />
+  <meta property="og:locale"      content="pt_BR" />
+  <meta property="og:site_name"   content="Serra do Mar Engenharia" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Serra do Mar Engenharia | Geotecnia &amp; Infraestrutura" />
+  <meta name="twitter:description" content="A base técnica para expansões seguras em infraestrutura e geotecnia." />
+  <meta name="twitter:image"       content="https://serra-do-mar.vercel.app/assets/hero.jpg" />
+
+  <!-- Preconnect / Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" />
+
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="assets/logo.jpg" type="image/jpeg" />
+
+  <!-- Schema.org — Organization + LocalBusiness -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Serra do Mar Engenharia",
-    "description": "Engenharia geotécnica e infraestrutura para projetos de alta criticidade.",
-    "url": "https://serra-do-mar.vercel.app"
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://serra-do-mar.vercel.app/#organization",
+        "name": "Serra do Mar Engenharia",
+        "description": "Engenharia geotécnica e infraestrutura para projetos de alta criticidade.",
+        "url": "https://serra-do-mar.vercel.app",
+        "logo": "https://serra-do-mar.vercel.app/assets/logo.jpg",
+        "sameAs": []
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://serra-do-mar.vercel.app/#localbusiness",
+        "name": "Serra do Mar Engenharia",
+        "description": "Geotecnia e infraestrutura para expansões seguras.",
+        "url": "https://serra-do-mar.vercel.app",
+        "logo": "https://serra-do-mar.vercel.app/assets/logo.jpg",
+        "image": "https://serra-do-mar.vercel.app/assets/hero.jpg",
+        "priceRange": "$$",
+        "telephone": "+55-00-00000-0000",
+        "email": "contato@serradomar.com.br",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "BR"
+        },
+        "hasMap": "",
+        "openingHours": "Mo-Fr 08:00-18:00",
+        "member": [
+          { "@type": "Person", "name": "Cássio Hister Bellan", "jobTitle": "Diretor Técnico" },
+          { "@type": "Person", "name": "Lucas França", "jobTitle": "Comunicação e Coordenação" }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://serra-do-mar.vercel.app/#website",
+        "url": "https://serra-do-mar.vercel.app",
+        "name": "Serra do Mar Engenharia",
+        "publisher": { "@id": "https://serra-do-mar.vercel.app/#organization" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": { "@type": "EntryPoint", "urlTemplate": "https://serra-do-mar.vercel.app/insights.html?q={search_term_string}" },
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
   }
   </script>
 </head>
 <body>
+  <!-- Mobile menu overlay -->
+  <div id="mobile-menu" class="mobile-menu" role="dialog" aria-label="Menu de navegação">
+    <a href="sobre.html">Sobre</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="projetos.html">Projetos</a>
+    <a href="insights.html">Insights</a>
+    <a href="contato.html">Contato</a>
+    <a class="btn primary" href="contato.html">Agendar diagnóstico</a>
+  </div>
+
   <header class="header">
     <div class="container nav">
       <a class="brand" href="index.html">
-        <img src="assets/logo.jpg" alt="Serra do Mar" />
+        <img src="assets/logo.jpg" alt="Serra do Mar Engenharia" />
         <span>Serra do Mar Engenharia</span>
       </a>
-      <nav class="nav-links">
+      <nav class="nav-links" aria-label="Navegação principal">
         <a href="sobre.html">Sobre</a>
         <a href="servicos.html">Serviços</a>
         <a href="projetos.html">Projetos</a>
@@ -36,6 +112,9 @@
         <a href="contato.html">Contato</a>
       </nav>
       <a class="btn primary" href="contato.html">Agendar diagnóstico</a>
+      <button id="hamburger" class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
@@ -57,7 +136,7 @@
         </div>
         <div class="hero-card reveal" data-reveal>
           <div class="stat">
-            <strong>Infraestrutura & Geotecnia</strong>
+            <strong>Infraestrutura &amp; Geotecnia</strong>
             <span class="tag">Loteamentos, condomínios, indústrias e grandes obras</span>
           </div>
           <div class="stat">
@@ -88,7 +167,7 @@
             </div>
             <div class="card">
               <h3>Credibilidade visível</h3>
-              <p>Marca e linguagem sobrias para reforçar confiança técnica.</p>
+              <p>Marca e linguagem sóbrias para reforçar confiança técnica.</p>
             </div>
           </div>
         </div>

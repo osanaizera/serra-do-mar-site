@@ -3,19 +3,72 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Primary Meta -->
   <title>Contato | Serra do Mar Engenharia</title>
-  <meta name="description" content="Fale com a Serra do Mar Engenharia e valide a base do seu projeto." />
+  <meta name="description" content="Fale com a Serra do Mar Engenharia e valide a base do seu projeto. Solicite um diagnóstico técnico inicial." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://serra-do-mar.vercel.app/contato.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://serra-do-mar.vercel.app/contato.html" />
+  <meta property="og:title"       content="Contato | Serra do Mar Engenharia" />
+  <meta property="og:description" content="Solicite um diagnóstico técnico inicial com a Serra do Mar Engenharia." />
+  <meta property="og:image"       content="https://serra-do-mar.vercel.app/assets/hero.jpg" />
+  <meta property="og:image:alt"   content="Serra do Mar Engenharia — Contato" />
+  <meta property="og:locale"      content="pt_BR" />
+  <meta property="og:site_name"   content="Serra do Mar Engenharia" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Contato | Serra do Mar Engenharia" />
+  <meta name="twitter:description" content="Solicite um diagnóstico técnico inicial com a Serra do Mar Engenharia." />
+  <meta name="twitter:image"       content="https://serra-do-mar.vercel.app/assets/hero.jpg" />
+
+  <!-- Preconnect / Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" />
+
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="assets/logo.jpg" type="image/jpeg" />
+
+  <!-- Schema.org — ContactPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contato — Serra do Mar Engenharia",
+    "url": "https://serra-do-mar.vercel.app/contato.html",
+    "description": "Solicite um diagnóstico técnico inicial com a Serra do Mar Engenharia.",
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://serra-do-mar.vercel.app/#organization",
+      "name": "Serra do Mar Engenharia"
+    }
+  }
+  </script>
 </head>
 <body>
+  <!-- Mobile menu overlay -->
+  <div id="mobile-menu" class="mobile-menu" role="dialog" aria-label="Menu de navegação">
+    <a href="sobre.html">Sobre</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="projetos.html">Projetos</a>
+    <a href="insights.html">Insights</a>
+    <a href="contato.html">Contato</a>
+    <a class="btn primary" href="contato.html">Agendar diagnóstico</a>
+  </div>
+
   <header class="header">
     <div class="container nav">
       <a class="brand" href="index.html">
-        <img src="assets/logo.jpg" alt="Serra do Mar" />
+        <img src="assets/logo.jpg" alt="Serra do Mar Engenharia" />
         <span>Serra do Mar Engenharia</span>
       </a>
-      <nav class="nav-links">
+      <nav class="nav-links" aria-label="Navegação principal">
         <a href="sobre.html">Sobre</a>
         <a href="servicos.html">Serviços</a>
         <a href="projetos.html">Projetos</a>
@@ -23,6 +76,9 @@
         <a href="contato.html">Contato</a>
       </nav>
       <a class="btn primary" href="contato.html">Agendar diagnóstico</a>
+      <button id="hamburger" class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
@@ -35,25 +91,90 @@
           <p>
             Envie sua demanda e retornaremos com um diagnóstico técnico inicial para orientar a expansão.
           </p>
-          <div class="grid two">
+          <div class="grid two" style="margin-top:2rem;">
             <div class="card">
               <h3>E-mail</h3>
-              <p>contato@serradomar.com.br</p>
+              <p style="color:var(--muted);">contato@serradomar.com.br</p>
             </div>
             <div class="card">
               <h3>WhatsApp</h3>
-              <p>+55 (00) 00000-0000</p>
+              <p style="color:var(--muted);">+55 (00) 00000-0000</p>
             </div>
           </div>
         </div>
+
         <div class="cta reveal" data-reveal>
           <h3>Solicite um diagnóstico de base</h3>
-          <form class="form">
-            <input type="text" placeholder="Nome" required />
-            <input type="email" placeholder="E-mail" required />
-            <input type="text" placeholder="Empresa" />
-            <textarea rows="4" placeholder="Descreva o projeto"></textarea>
-            <button class="btn primary" type="submit">Enviar</button>
+          <p style="color:var(--muted); font-size:0.88rem; margin-bottom:1.2rem;">
+            Preencha os campos abaixo. Retornaremos em até 1 dia útil.
+          </p>
+
+          <!-- FORMSPREE — trocar xpwzqjnb pelo ID gerado na sua conta Formspree -->
+          <form
+            id="contact-form"
+            class="form"
+            action="https://formspree.io/f/xpwzqjnb"
+            method="POST"
+            novalidate
+          >
+            <div class="form-row">
+              <input
+                type="text"
+                name="nome"
+                placeholder="Nome completo *"
+                required
+                autocomplete="name"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="E-mail *"
+                required
+                autocomplete="email"
+              />
+            </div>
+
+            <div class="form-row">
+              <input
+                type="tel"
+                name="telefone"
+                placeholder="Telefone / WhatsApp"
+                autocomplete="tel"
+              />
+              <input
+                type="text"
+                name="empresa"
+                placeholder="Empresa"
+                autocomplete="organization"
+              />
+            </div>
+
+            <select name="tipo_projeto" aria-label="Tipo de projeto">
+              <option value="" disabled selected>Tipo de projeto…</option>
+              <option value="Geotecnia / Fundações">Geotecnia / Fundações</option>
+              <option value="Infraestrutura para Loteamento">Infraestrutura para Loteamento</option>
+              <option value="Expansão Industrial">Expansão Industrial</option>
+              <option value="Laudo / Parecer Técnico">Laudo / Parecer Técnico</option>
+              <option value="Consultoria Estratégica">Consultoria Estratégica</option>
+              <option value="Monitoramento de Risco">Monitoramento de Risco</option>
+              <option value="Outro">Outro</option>
+            </select>
+
+            <textarea
+              name="mensagem"
+              rows="4"
+              placeholder="Descreva seu projeto e as principais necessidades *"
+              required
+            ></textarea>
+
+            <!-- Honeypot anti-spam -->
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+            <button class="btn primary" type="submit" style="width:100%; justify-content:center;">
+              Enviar mensagem
+            </button>
+
+            <div id="form-message" class="form-message" aria-live="polite"></div>
           </form>
         </div>
       </div>

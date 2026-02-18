@@ -3,19 +3,72 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Primary Meta -->
   <title>Projetos | Serra do Mar Engenharia</title>
-  <meta name="description" content="Projetos de infraestrutura e geotecnia com foco na base para expansão segura." />
+  <meta name="description" content="Projetos de infraestrutura e geotecnia com foco na base para expansão segura. Condomínios logísticos, industriais, comerciais e residenciais." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://serra-do-mar.vercel.app/projetos.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://serra-do-mar.vercel.app/projetos.html" />
+  <meta property="og:title"       content="Projetos | Serra do Mar Engenharia" />
+  <meta property="og:description" content="Projetos de infraestrutura e geotecnia com foco na base para expansão segura." />
+  <meta property="og:image"       content="https://serra-do-mar.vercel.app/assets/hero.jpg" />
+  <meta property="og:image:alt"   content="Serra do Mar Engenharia — Projetos" />
+  <meta property="og:locale"      content="pt_BR" />
+  <meta property="og:site_name"   content="Serra do Mar Engenharia" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Projetos | Serra do Mar Engenharia" />
+  <meta name="twitter:description" content="Projetos de infraestrutura e geotecnia com foco na base para expansão segura." />
+  <meta name="twitter:image"       content="https://serra-do-mar.vercel.app/assets/hero.jpg" />
+
+  <!-- Preconnect / Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" />
+
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="assets/logo.jpg" type="image/jpeg" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Projetos — Serra do Mar Engenharia",
+    "description": "Portfólio de projetos de geotecnia e infraestrutura.",
+    "url": "https://serra-do-mar.vercel.app/projetos.html",
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://serra-do-mar.vercel.app/#organization",
+      "name": "Serra do Mar Engenharia"
+    }
+  }
+  </script>
 </head>
 <body>
+  <!-- Mobile menu overlay -->
+  <div id="mobile-menu" class="mobile-menu" role="dialog" aria-label="Menu de navegação">
+    <a href="sobre.html">Sobre</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="projetos.html">Projetos</a>
+    <a href="insights.html">Insights</a>
+    <a href="contato.html">Contato</a>
+    <a class="btn primary" href="contato.html">Agendar diagnóstico</a>
+  </div>
+
   <header class="header">
     <div class="container nav">
       <a class="brand" href="index.html">
-        <img src="assets/logo.jpg" alt="Serra do Mar" />
+        <img src="assets/logo.jpg" alt="Serra do Mar Engenharia" />
         <span>Serra do Mar Engenharia</span>
       </a>
-      <nav class="nav-links">
+      <nav class="nav-links" aria-label="Navegação principal">
         <a href="sobre.html">Sobre</a>
         <a href="servicos.html">Serviços</a>
         <a href="projetos.html">Projetos</a>
@@ -23,6 +76,9 @@
         <a href="contato.html">Contato</a>
       </nav>
       <a class="btn primary" href="contato.html">Agendar diagnóstico</a>
+      <button id="hamburger" class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
@@ -39,7 +95,7 @@
         </div>
         <div class="hero-card reveal" data-reveal>
           <strong>Clientes ideais</strong>
-          <p class="lead">Empresas grandes que enxergam geotecnia como investimento.</p>
+          <p class="lead" style="color:var(--muted);">Empresas grandes que enxergam geotecnia como investimento.</p>
           <span class="tag">Atacadistas · Industriais · Incorporadoras</span>
         </div>
       </div>

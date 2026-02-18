@@ -3,19 +3,72 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Primary Meta -->
   <title>Insights | Serra do Mar Engenharia</title>
-  <meta name="description" content="Insights técnicos sobre base, fundações e segurança para projetos em expansão." />
+  <meta name="description" content="Insights técnicos sobre base, fundações e segurança para projetos em expansão. Conteúdo para gestores, engenheiros e investidores." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://serra-do-mar.vercel.app/insights.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://serra-do-mar.vercel.app/insights.html" />
+  <meta property="og:title"       content="Insights | Serra do Mar Engenharia" />
+  <meta property="og:description" content="Insights técnicos sobre base, fundações e segurança para projetos em expansão." />
+  <meta property="og:image"       content="https://serra-do-mar.vercel.app/assets/hero.jpg" />
+  <meta property="og:image:alt"   content="Serra do Mar Engenharia — Insights" />
+  <meta property="og:locale"      content="pt_BR" />
+  <meta property="og:site_name"   content="Serra do Mar Engenharia" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Insights | Serra do Mar Engenharia" />
+  <meta name="twitter:description" content="Insights técnicos sobre base, fundações e segurança para projetos em expansão." />
+  <meta name="twitter:image"       content="https://serra-do-mar.vercel.app/assets/hero.jpg" />
+
+  <!-- Preconnect / Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" />
+
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="assets/logo.jpg" type="image/jpeg" />
+
+  <!-- Schema.org — Blog / insights -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Insights — Serra do Mar Engenharia",
+    "description": "Conteúdo técnico sobre geotecnia, fundações e infraestrutura para expansões seguras.",
+    "url": "https://serra-do-mar.vercel.app/insights.html",
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://serra-do-mar.vercel.app/#organization",
+      "name": "Serra do Mar Engenharia"
+    }
+  }
+  </script>
 </head>
 <body>
+  <!-- Mobile menu overlay -->
+  <div id="mobile-menu" class="mobile-menu" role="dialog" aria-label="Menu de navegação">
+    <a href="sobre.html">Sobre</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="projetos.html">Projetos</a>
+    <a href="insights.html">Insights</a>
+    <a href="contato.html">Contato</a>
+    <a class="btn primary" href="contato.html">Agendar diagnóstico</a>
+  </div>
+
   <header class="header">
     <div class="container nav">
       <a class="brand" href="index.html">
-        <img src="assets/logo.jpg" alt="Serra do Mar" />
+        <img src="assets/logo.jpg" alt="Serra do Mar Engenharia" />
         <span>Serra do Mar Engenharia</span>
       </a>
-      <nav class="nav-links">
+      <nav class="nav-links" aria-label="Navegação principal">
         <a href="sobre.html">Sobre</a>
         <a href="servicos.html">Serviços</a>
         <a href="projetos.html">Projetos</a>
@@ -23,6 +76,9 @@
         <a href="contato.html">Contato</a>
       </nav>
       <a class="btn primary" href="contato.html">Agendar diagnóstico</a>
+      <button id="hamburger" class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
@@ -39,7 +95,7 @@
         </div>
         <div class="hero-card reveal" data-reveal>
           <strong>Estratégia editorial</strong>
-          <p class="lead">Base segura, risco controlado e decisões rápidas.</p>
+          <p class="lead" style="color:var(--muted);">Base segura, risco controlado e decisões rápidas.</p>
         </div>
       </div>
     </section>
