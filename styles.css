@@ -849,30 +849,30 @@ h2 { font-weight: 700; }
   transition: opacity 0.25s cubic-bezier(0.2, 0, 0.38, 0.9);
 }
 
-/* Diferentes texturas de solo para cada card */
+/* Fotos reais de solo como fundo dos cards */
 .grid.three .card:nth-child(1)::before {
-  background-image: url('assets/soil-texture-1.svg');
+  background-image: url('assets/soil-photo-1.jpg');
   background-size: cover;
   background-position: center;
-  opacity: 0.18;
+  opacity: 0.22;
 }
 
 .grid.three .card:nth-child(2)::before {
-  background-image: url('assets/soil-texture-2.svg');
+  background-image: url('assets/soil-photo-2.jpg');
   background-size: cover;
   background-position: center;
-  opacity: 0.18;
+  opacity: 0.22;
 }
 
 .grid.three .card:nth-child(3)::before {
-  background-image: url('assets/soil-texture-3.svg');
+  background-image: url('assets/soil-photo-3.jpg');
   background-size: cover;
   background-position: center;
-  opacity: 0.18;
+  opacity: 0.22;
 }
 
 .grid.three .card:hover::before {
-  opacity: 0.25;
+  opacity: 0.35;
 }
 
 /* Números de ordem para cards de serviço */
