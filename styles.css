@@ -811,7 +811,8 @@ h2 { font-weight: 700; }
   }
 }
 
-/* Original styles for other full-bleed sections - DO NOT REMOVE */
+/* Full-bleed sections — texturas SVG de estratificação de solo como fundo.
+   Overlay reduzido para texturas SVG (já são sutis por design). */
 .full-bleed {
   position: relative;
   background-size: cover;
@@ -824,7 +825,7 @@ h2 { font-weight: 700; }
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, rgba(12, 17, 22, 0.92), rgba(12, 17, 22, 0.55));
+  background: linear-gradient(120deg, rgba(12, 17, 22, 0.60), rgba(12, 17, 22, 0.30));
   z-index: -1;
 }
 
@@ -833,8 +834,35 @@ h2 { font-weight: 700; }
   z-index: 1;
 }
 
-.infra-image { background-image: url("assets/infra.jpg"); }
-.strata-image { background-image: url("assets/strata.jpg"); }
+/* Texturas geotécnicas SVG (estratificação de solo) como background em seções full-bleed.
+   As texturas SVG são leves (~5-10KB) e substituem o uso pesado de fotos JPG como fundo,
+   mantendo a identidade geotécnica da marca com maior performance e legibilidade. */
+.infra-image {
+  background-image: url("assets/texture-sondagem-profile.svg");
+  background-color: var(--bg-dark);
+}
+.strata-image {
+  background-image: url("assets/texture-strata-horizontal.svg");
+  background-color: var(--bg-dark);
+}
+
+/* Classe para seções com a textura de grid geotécnico */
+.geo-grid-image {
+  background-image: url("assets/texture-geological-grid.svg");
+  background-color: var(--bg-dark);
+}
+
+/* Classe para seções com textura topográfica */
+.topo-image {
+  background-image: url("assets/texture-topographic-contour.svg");
+  background-color: var(--bg-dark);
+}
+
+/* Classe para seções com textura de gradiente granulométrico */
+.grain-image {
+  background-image: url("assets/texture-grain-gradient.svg");
+  background-color: var(--bg-dark);
+}
 
 /* ============================================================
    Sections
@@ -1453,13 +1481,24 @@ select option {
 }
 
 /* ============================================================
-   Footer
+   Footer — com textura topográfica sutil de fundo
    ============================================================ */
 .footer {
   padding: 2.5rem 0;
   border-top: 1px solid var(--line);
   color: var(--muted);
   font-size: 0.85rem;
+  position: relative;
+  background: var(--bg-dark) url("assets/texture-topographic-contour.svg") center/cover no-repeat;
+}
+
+/* Overlay para manter legibilidade sobre a textura */
+.footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(11,18,32,0.85);
+  pointer-events: none;
 }
 
 .footer .container {
@@ -1467,6 +1506,8 @@ select option {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1rem;
+  position: relative;
+  z-index: 1;
 }
 
 /* ============================================================
@@ -1503,6 +1544,42 @@ select option {
 }
 
 /* ============================================================
+   Subpage hero — dimensionamento correto para páginas internas
+   ============================================================ */
+.hero.full-bleed {
+  min-height: auto;
+  height: auto;
+  padding: 2rem 0;
+}
+
+.hero.full-bleed .hero-grid {
+  padding: 5rem 0 3rem;
+  height: auto;
+}
+
+/* Badge de subpágina (span.badge nos heroes internos) */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  padding: 0.25rem 0.65rem;
+  background: rgba(74,125,188,0.08);
+  border: 1px solid rgba(74,125,188,0.15);
+  border-radius: 4px;
+}
+
+/* hero-image class — usada em projetos e insights (sem JPG, usa textura) */
+.hero-image {
+  background-image: url("assets/texture-geological-grid.svg");
+  background-color: var(--bg-dark);
+}
+
+/* ============================================================
    Responsive
    ============================================================ */
 
@@ -1523,6 +1600,16 @@ select option {
     padding-top: 0;
   }
 
+  /* Subpage heroes não precisam de tela cheia */
+  .hero.full-bleed {
+    min-height: auto;
+    padding: 1rem 0;
+  }
+
+  .hero.full-bleed .hero-grid {
+    padding: 4rem 0 2rem;
+  }
+
   .hero-grid {
     grid-template-columns: 1fr;
     padding: 5.5rem 0 2rem;
@@ -1531,7 +1618,7 @@ select option {
   }
 
   .hero h1 {
-    font-size: clamp(2rem, 8vw, 2.8rem);
+    font-size: clamp(1.75rem, 7vw, 2.4rem);
     margin-bottom: 1rem;
   }
 
@@ -1559,9 +1646,20 @@ select option {
     border-radius: 16px;
   }
 
+  /* Limpa pseudo-elementos do hero-card que estragam mobile */
+  .hero-card::after {
+    display: none;
+  }
+
+  .metric::before,
+  .metric::after {
+    display: none;
+  }
+
   .metric {
     gap: 0.75rem;
     padding: 0.75rem 0;
+    padding-left: 0;
   }
 
   .metric strong {
@@ -1592,13 +1690,19 @@ select option {
     gap: 1rem;
   }
 
+  /* Grid 2 colunas → 1 coluna em mobile */
+  .grid.two {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
   /* Split sections → 1 coluna */
   .split {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
 
-  /* Layer graphic */
+  /* Layer graphic — escondido em mobile (muito pequeno para detalhes técnicos) */
   .layer-graphic {
     display: none;
   }
@@ -1610,7 +1714,15 @@ select option {
 
   /* Typography ajustes */
   h2 {
-    font-size: clamp(1.6rem, 6vw, 2rem);
+    font-size: clamp(1.5rem, 6vw, 1.9rem);
+  }
+
+  h3 {
+    font-size: clamp(1.1rem, 4vw, 1.35rem);
+  }
+
+  .lead {
+    font-size: 0.95rem;
   }
 
   /* Nav */
@@ -1621,6 +1733,51 @@ select option {
   /* Técnico SVG grid — desativa no mobile para performance */
   .hero-bg-grid {
     display: none;
+  }
+
+  /* CTA box */
+  .cta {
+    padding: 1.6rem;
+    border-radius: 16px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 1.5rem 0;
+  }
+
+  .footer .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  /* Team cards */
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-card {
+    padding: 1.4rem 1.2rem;
+  }
+
+  /* Timeline */
+  .timeline {
+    padding-left: 1.2rem;
+  }
+
+  /* Cards em subpáginas */
+  .card {
+    padding: 1.2rem;
+  }
+
+  .card h3 {
+    font-size: 1.05rem;
+  }
+
+  .card p {
+    font-size: 0.88rem;
   }
 }
 
@@ -1638,8 +1795,17 @@ select option {
     min-height: 100svh;
   }
 
+  /* Subpage heroes */
+  .hero.full-bleed {
+    min-height: auto;
+  }
+
+  .hero.full-bleed .hero-grid {
+    padding: 4.5rem 0 2.5rem;
+  }
+
   .hero h1 {
-    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    font-size: clamp(2rem, 5vw, 3rem);
   }
 
   .hero-actions {
@@ -1655,8 +1821,17 @@ select option {
     gap: 2rem;
   }
 
+  /* Layer graphic — reduzido em tablet mas ainda visível */
   .layer-graphic {
-    display: none;
+    max-width: 100%;
+  }
+
+  /* Footer */
+  .footer .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
   }
 }
 

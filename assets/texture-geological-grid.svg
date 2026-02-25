@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <!-- Textura 2: Grid Geotécnico com Perfil de Sondagem
+       Inspiração: Planta de sondagem + grade de coordenadas topográficas
+       Uso: Seções de serviços, seções informativas
+       Palette: azul técnico predominante + marcadores em laranja -->
+  <defs>
+    <linearGradient id="gg-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B1220"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background base -->
+  <rect width="1200" height="800" fill="url(#gg-bg)"/>
+  
+  <!-- GRADE PRINCIPAL — grid técnico de coordenadas -->
+  <g stroke="rgba(74,125,188,0.06)" stroke-width="0.5">
+    <!-- Linhas horizontais a cada 100px -->
+    <line x1="0" y1="100" x2="1200" y2="100"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="400" x2="1200" y2="400"/>
+    <line x1="0" y1="500" x2="1200" y2="500"/>
+    <line x1="0" y1="600" x2="1200" y2="600"/>
+    <line x1="0" y1="700" x2="1200" y2="700"/>
+    
+    <!-- Linhas verticais a cada 150px -->
+    <line x1="150" y1="0" x2="150" y2="800"/>
+    <line x1="300" y1="0" x2="300" y2="800"/>
+    <line x1="450" y1="0" x2="450" y2="800"/>
+    <line x1="600" y1="0" x2="600" y2="800"/>
+    <line x1="750" y1="0" x2="750" y2="800"/>
+    <line x1="900" y1="0" x2="900" y2="800"/>
+    <line x1="1050" y1="0" x2="1050" y2="800"/>
+  </g>
+  
+  <!-- SUBGRADE — detalhamento mais fino a cada 50px -->
+  <g stroke="rgba(74,125,188,0.02)" stroke-width="0.3">
+    <line x1="0" y1="50" x2="1200" y2="50"/>
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="250" x2="1200" y2="250"/>
+    <line x1="0" y1="350" x2="1200" y2="350"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+    <line x1="0" y1="550" x2="1200" y2="550"/>
+    <line x1="0" y1="650" x2="1200" y2="650"/>
+    <line x1="0" y1="750" x2="1200" y2="750"/>
+    
+    <line x1="75" y1="0" x2="75" y2="800"/>
+    <line x1="225" y1="0" x2="225" y2="800"/>
+    <line x1="375" y1="0" x2="375" y2="800"/>
+    <line x1="525" y1="0" x2="525" y2="800"/>
+    <line x1="675" y1="0" x2="675" y2="800"/>
+    <line x1="825" y1="0" x2="825" y2="800"/>
+    <line x1="975" y1="0" x2="975" y2="800"/>
+    <line x1="1125" y1="0" x2="1125" y2="800"/>
+  </g>
+  
+  <!-- PONTOS DE SONDAGEM — distribuição em planta -->
+  <g opacity="0.15">
+    <!-- SP-01 -->
+    <circle cx="225" cy="200" r="5" fill="none" stroke="rgba(245,138,52,0.6)" stroke-width="1"/>
+    <line x1="218" y1="200" x2="232" y2="200" stroke="rgba(245,138,52,0.4)" stroke-width="0.5"/>
+    <line x1="225" y1="193" x2="225" y2="207" stroke="rgba(245,138,52,0.4)" stroke-width="0.5"/>
+    
+    <!-- SP-02 -->
+    <circle cx="600" cy="300" r="5" fill="none" stroke="rgba(245,138,52,0.6)" stroke-width="1"/>
+    <line x1="593" y1="300" x2="607" y2="300" stroke="rgba(245,138,52,0.4)" stroke-width="0.5"/>
+    <line x1="600" y1="293" x2="600" y2="307" stroke="rgba(245,138,52,0.4)" stroke-width="0.5"/>
+    
+    <!-- SP-03 -->
+    <circle cx="900" cy="200" r="5" fill="none" stroke="rgba(245,138,52,0.6)" stroke-width="1"/>
+    <line x1="893" y1="200" x2="907" y2="200" stroke="rgba(245,138,52,0.4)" stroke-width="0.5"/>
+    <line x1="900" y1="193" x2="900" y2="207" stroke="rgba(245,138,52,0.4)" stroke-width="0.5"/>
+    
+    <!-- SP-04 -->
+    <circle cx="450" cy="550" r="5" fill="none" stroke="rgba(245,138,52,0.6)" stroke-width="1"/>
+    <line x1="443" y1="550" x2="457" y2="550" stroke="rgba(245,138,52,0.4)" stroke-width="0.5"/>
+    <line x1="450" y1="543" x2="450" y2="557" stroke="rgba(245,138,52,0.4)" stroke-width="0.5"/>
+    
+    <!-- SP-05 -->
+    <circle cx="825" cy="600" r="5" fill="none" stroke="rgba(245,138,52,0.6)" stroke-width="1"/>
+    <line x1="818" y1="600" x2="832" y2="600" stroke="rgba(245,138,52,0.4)" stroke-width="0.5"/>
+    <line x1="825" y1="593" x2="825" y2="607" stroke="rgba(245,138,52,0.4)" stroke-width="0.5"/>
+  </g>
+  
+  <!-- CURVAS DE NÍVEL SUTIS — linhas topográficas -->
+  <g fill="none" stroke="rgba(54,137,103,0.06)" stroke-width="0.6">
+    <path d="M0,350 C100,340 250,360 400,345 C550,330 700,355 850,340 C1000,325 1100,348 1200,338"/>
+    <path d="M0,420 C120,410 280,430 450,415 C620,400 770,425 920,410 C1070,395 1150,418 1200,408"/>
+    <path d="M0,490 C90,480 220,500 380,485 C540,470 680,495 840,480 C1000,465 1110,488 1200,478"/>
+  </g>
+  
+  <!-- COORDENADAS DE EIXO — marcadores técnicos -->
+  <g font-family="monospace" font-size="6" fill="rgba(74,125,188,0.08)" text-anchor="middle">
+    <text x="150" y="16">N150</text>
+    <text x="300" y="16">N300</text>
+    <text x="450" y="16">N450</text>
+    <text x="600" y="16">N600</text>
+    <text x="750" y="16">N750</text>
+    <text x="900" y="16">N900</text>
+    <text x="1050" y="16">N1050</text>
+  </g>
+  
+  <g font-family="monospace" font-size="6" fill="rgba(74,125,188,0.08)" text-anchor="end">
+    <text x="14" y="103" transform="rotate(-90,14,103)">E100</text>
+    <text x="14" y="203" transform="rotate(-90,14,203)">E200</text>
+    <text x="14" y="303" transform="rotate(-90,14,303)">E300</text>
+    <text x="14" y="403" transform="rotate(-90,14,403)">E400</text>
+    <text x="14" y="503" transform="rotate(-90,14,503)">E500</text>
+    <text x="14" y="603" transform="rotate(-90,14,603)">E600</text>
+    <text x="14" y="703" transform="rotate(-90,14,703)">E700</text>
+  </g>
+  
+  <!-- ELEMENTOS DECORATIVOS TÉCNICOS — ângulo de norte magnético -->
+  <g transform="translate(1140,60)" opacity="0.1">
+    <line x1="0" y1="20" x2="0" y2="-20" stroke="rgba(74,125,188,0.8)" stroke-width="1"/>
+    <polygon points="0,-20 -4,-12 4,-12" fill="rgba(74,125,188,0.5)"/>
+    <text x="0" y="-25" font-family="monospace" font-size="7" fill="rgba(74,125,188,0.6)" text-anchor="middle">N</text>
+  </g>
+</svg>
