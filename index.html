@@ -29,8 +29,8 @@
   <!-- Preconnect / Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:ital,wght@0,400;0,500;0,600;1,400&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:ital,wght@0,400;0,500;0,600;1,400&display=swap" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" />
 
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="assets/logo-transparente.png" type="image/png" />
@@ -120,7 +120,7 @@
 
   <main>
     <section class="hero">
-      <!-- Mosaico estratigráfico: 3 fotos de solo em faixas verticais -->
+      <!-- Mosaico estratigráfico -->
       <div class="hero-strata" aria-hidden="true">
         <div class="hero-strata-layer"></div>
         <div class="hero-strata-layer"></div>
@@ -128,39 +128,30 @@
       </div>
       <div class="hero-bg-grid">
         <svg class="technical-grid" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-          <!-- Horizontal grid lines -->
           <line class="grid-line h-line" x1="0" y1="50" x2="1000" y2="50" />
           <line class="grid-line h-line" x1="0" y1="120" x2="1000" y2="120" />
           <line class="grid-line h-line" x1="0" y1="200" x2="1000" y2="200" />
           <line class="grid-line h-line" x1="0" y1="300" x2="1000" y2="300" />
           <line class="grid-line h-line" x1="0" y1="420" x2="1000" y2="420" />
           <line class="grid-line h-line" x1="0" y1="550" x2="1000" y2="550" />
-
-          <!-- Vertical grid lines -->
           <line class="grid-line v-line" x1="50" y1="0" x2="50" y2="600" />
           <line class="grid-line v-line" x1="180" y1="0" x2="180" y2="600" />
           <line class="grid-line v-line" x1="350" y1="0" x2="350" y2="600" />
           <line class="grid-line v-line" x1="520" y1="0" x2="520" y2="600" />
           <line class="grid-line v-line" x1="700" y1="0" x2="700" y2="600" />
           <line class="grid-line v-line" x1="880" y1="0" x2="880" y2="600" />
-
-          <!-- Elevation markers -->
           <text class="grid-text" x="10" y="54">+3.50m</text>
           <text class="grid-text" x="10" y="124">+2.15m</text>
           <text class="grid-text" x="10" y="204">+0.80m</text>
           <text class="grid-text" x="10" y="304">-1.20m</text>
           <text class="grid-text" x="10" y="424">-2.85m</text>
           <text class="grid-text" x="10" y="554">-4.30m</text>
-
-          <!-- Coordinate markers -->
           <text class="grid-text" x="50" y="20">A</text>
           <text class="grid-text" x="180" y="20">B</text>
           <text class="grid-text" x="350" y="20">C</text>
           <text class="grid-text" x="520" y="20">D</text>
           <text class="grid-text" x="700" y="20">E</text>
           <text class="grid-text" x="880" y="20">F</text>
-
-          <!-- Reference point and circle -->
           <circle class="grid-point" cx="700" cy="200" r="8" />
           <line class="grid-point-line" x1="700" y1="200" x2="740" y2="200" />
           <line class="grid-point-line" x1="700" y1="200" x2="700" y2="240" />
@@ -172,16 +163,22 @@
         <div class="hero-content">
           <div class="badge-line">
             <span class="line-decoration"></span>
-            <span class="mono-badge">GEOTECNIA • INFRAESTRUTURA</span>
+            <span class="mono-badge">GEOTECNIA · INFRAESTRUTURA</span>
           </div>
           
-          <h1>Conhecemos o chão que você constrói.</h1>
+          <h1>Conhecemos o chão<br>que você constrói.</h1>
           
           <span class="accent-line"></span>
           
           <p>
-            Sua expansão exige segurança desde a base. Nossa geotecnia transforma incertezas do subsolo 
-            em fundações estáveis, com relatórios executivos que orientam decisões estratégicas precisas.
+            Sua expansão exige segurança desde a base. 
+            Nossa geotecnia transforma incertezas do subsolo 
+            em fundações estáveis.
+          </p>
+
+          <p>
+            Relatórios executivos que orientam 
+            decisões estratégicas precisas.
           </p>
           
           <div class="hero-actions">
@@ -229,7 +226,7 @@
         <div class="container">
           <div class="stats-row">
             <div class="stat-item">15+ anos de projetos</div>
-            <div class="stat-item">Geotecnia • Fundações • Infraestrutura</div>
+            <div class="stat-item">Geotecnia · Fundações · Infraestrutura</div>
             <div class="stat-item">100% de responsabilidade técnica</div>
           </div>
         </div>
@@ -239,26 +236,40 @@
     <section class="section full-bleed strata-image">
       <div class="container split">
         <div data-reveal class="reveal">
-          <h2>Quem conhece a base constrói com segurança</h2>
+          <h2>Quem conhece a base<br>constrói com segurança</h2>
+          
           <p class="lead">
-            Grandes projetos de expansão dependem de um subsolo analisado com precisão técnica. Fornecemos 
-            a base confiável que sua obra exige, traduzindo complexidade geotécnica em recomendações 
-            executivas para decisores que não podem comprometer segurança e prazos.
+            Grandes projetos de expansão dependem de um subsolo 
+            analisado com precisão técnica.
           </p>
+
+          <p class="lead">
+            Fornecemos a base confiável que sua obra exige, traduzindo 
+            complexidade geotécnica em recomendações executivas.
+          </p>
+
+          <div class="spacer"></div>
+
           <div class="highlight">
             <div class="card">
               <h3>Decisão sem ruído</h3>
-              <p>Relatórios técnicos com hierarquia clara de riscos e ações, permitindo aprovações mais ágeis.</p>
+              <p>
+                Relatórios técnicos com hierarquia clara de riscos e ações. 
+                Aprovações mais ágeis, menos incerteza.
+              </p>
             </div>
             <div class="card">
               <h3>Credibilidade visível</h3>
-              <p>Comunicação técnica precisa e rigor metodológico que transmitem confiança para stakeholders críticos.</p>
+              <p>
+                Comunicação técnica precisa e rigor metodológico que transmitem 
+                confiança para stakeholders críticos.
+              </p>
             </div>
           </div>
         </div>
         <div class="layer-graphic reveal" data-reveal>
           <h3>Camadas que sustentam decisões</h3>
-          <p class="lead">Do estudo estratigráfico à interpretação do NSPT: cada camada de solo analisada é uma camada de risco controlada.</p>
+          <p class="lead">Do estudo estratigráfico à interpretação do NSPT: cada camada analisada é uma camada de risco controlada.</p>
           <div class="layer-stack">
             <div class="layer"></div>
             <div class="layer"></div>
@@ -271,23 +282,37 @@
 
     <section class="section">
       <div class="container">
-        <h2>Serviços que sustentam a expansão</h2>
-        <p class="lead">Base técnica para decisores que precisam garantir segurança em investimentos de alto valor e criticidade.</p>
+        <h2>Serviços que sustentam<br>a expansão</h2>
+        
+        <p class="lead">
+          Base técnica para decisores que precisam garantir segurança 
+          em investimentos de alto valor.
+        </p>
+
         <div class="grid three reveal" data-reveal>
           <div class="card">
             <span class="tag">Geotecnia</span>
             <h3>Estudos de base</h3>
-            <p>Investigação geotécnica com sondagens SPT, ensaios de campo e laboratoriais que reduzem imprevistos na execução de fundações.</p>
+            <p>
+              Investigação geotécnica com sondagens SPT, ensaios de campo 
+              e laboratoriais que reduzem imprevistos na execução.
+            </p>
           </div>
           <div class="card">
             <span class="tag">Infraestrutura</span>
             <h3>Projetos para expansão</h3>
-            <p>Dimensionamento geotécnico e infraestrutura com especificações técnicas para obras de loteamentos e plantas industriais.</p>
+            <p>
+              Dimensionamento geotécnico e infraestrutura com especificações 
+              técnicas para loteamentos e plantas industriais.
+            </p>
           </div>
           <div class="card">
             <span class="tag">Governança</span>
             <h3>Laudos e pareceres</h3>
-            <p>Documentação técnica e ART para processos de aprovação, licenciamento ambiental e conformidade normativa com órgãos reguladores.</p>
+            <p>
+              Documentação técnica e ART para aprovação, licenciamento 
+              ambiental e conformidade normativa.
+            </p>
           </div>
         </div>
       </div>
@@ -296,26 +321,51 @@
     <section class="section full-bleed infra-image">
       <div class="container split">
         <div data-reveal class="reveal">
-          <h2>Processo orientado à segurança</h2>
-          <p class="lead">Metodologia estruturada que transforma dados técnicos em suporte para decisões executivas críticas de expansão.</p>
+          <h2>Processo orientado<br>à segurança</h2>
+          
+          <p class="lead">
+            Metodologia estruturada que transforma dados técnicos 
+            em suporte para decisões executivas.
+          </p>
+
+          <div class="spacer"></div>
+
           <div class="timeline">
             <div class="timeline-item">
               <strong>Diagnóstico da base</strong>
-              <p>Avaliação preliminar das condições do solo e alinhamento com os parâmetros críticos de seu projeto de expansão.</p>
+              <p>
+                Avaliação preliminar das condições do solo e alinhamento 
+                com os parâmetros críticos do projeto.
+              </p>
             </div>
             <div class="timeline-item">
               <strong>Investigação e modelagem</strong>
-              <p>Ensaios in situ, caracterização do solo e modelagem geotécnica para quantificar riscos e definir parâmetros seguros.</p>
+              <p>
+                Ensaios in situ, caracterização do solo e modelagem 
+                geotécnica para quantificar riscos.
+              </p>
             </div>
             <div class="timeline-item">
               <strong>Entrega para decisão</strong>
-              <p>Relatórios executivos com hierarquia de riscos, recomendações técnicas e especificações precisas para contratação e execução.</p>
+              <p>
+                Relatórios executivos com hierarquia de riscos, 
+                recomendações e especificações precisas.
+              </p>
             </div>
           </div>
         </div>
         <div class="cta reveal" data-reveal>
-          <h3>Construa com segurança desde a base</h3>
-          <p>Expansões bem-sucedidas começam com geotecnia rigorosa. Antes de avançar com seu projeto, obtenha uma análise técnica das condições do solo.</p>
+          <h3>Construa com segurança<br>desde a base</h3>
+          
+          <p>
+            Expansões bem-sucedidas começam com geotecnia rigorosa.
+          </p>
+
+          <p>
+            Antes de avançar, obtenha uma análise técnica 
+            das condições do solo.
+          </p>
+
           <a class="btn primary" href="contato.html">Solicitar diagnóstico técnico</a>
         </div>
       </div>
