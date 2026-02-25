@@ -95,14 +95,14 @@
     <a href="projetos.html">Projetos</a>
     <a href="insights.html">Insights</a>
     <a href="contato.html">Contato</a>
-    <a class="btn primary" href="contato.html">Agendar diagnóstico</a>
+    <a class="btn primary" href="contato.html">Fale conosco</a>
   </div>
 
   <header class="header">
     <div class="container nav">
       <a class="brand" href="index.html">
         <img src="assets/logo-transparente.png" alt="Serra do Mar Engenharia" />
-        <span>Serra do Mar Engenharia</span>
+        <span>Serra do Mar</span>
       </a>
       <nav class="nav-links" aria-label="Navegação principal">
         <a href="sobre.html">Sobre</a>
@@ -111,7 +111,7 @@
         <a href="insights.html">Insights</a>
         <a href="contato.html">Contato</a>
       </nav>
-      <a class="btn primary" href="contato.html">Agendar diagnóstico</a>
+      <a class="btn primary" href="contato.html">Fale conosco</a>
       <button id="hamburger" class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
         <span></span><span></span><span></span>
       </button>
@@ -119,263 +119,210 @@
   </header>
 
   <main>
+    <!-- ========== 1. HERO — Full-screen photo + bold headline ========== -->
     <section class="hero">
-      <!-- Mosaico estratigráfico -->
-      <div class="hero-strata" aria-hidden="true">
-        <div class="hero-strata-layer"></div>
-        <div class="hero-strata-layer"></div>
-        <div class="hero-strata-layer"></div>
+      <div class="hero-bg">
+        <img src="assets/hero.jpg" alt="Obra de infraestrutura geotécnica" />
       </div>
-      <div class="hero-bg-grid">
-        <svg class="technical-grid" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-          <line class="grid-line h-line" x1="0" y1="50" x2="1000" y2="50" />
-          <line class="grid-line h-line" x1="0" y1="120" x2="1000" y2="120" />
-          <line class="grid-line h-line" x1="0" y1="200" x2="1000" y2="200" />
-          <line class="grid-line h-line" x1="0" y1="300" x2="1000" y2="300" />
-          <line class="grid-line h-line" x1="0" y1="420" x2="1000" y2="420" />
-          <line class="grid-line h-line" x1="0" y1="550" x2="1000" y2="550" />
-          <line class="grid-line v-line" x1="50" y1="0" x2="50" y2="600" />
-          <line class="grid-line v-line" x1="180" y1="0" x2="180" y2="600" />
-          <line class="grid-line v-line" x1="350" y1="0" x2="350" y2="600" />
-          <line class="grid-line v-line" x1="520" y1="0" x2="520" y2="600" />
-          <line class="grid-line v-line" x1="700" y1="0" x2="700" y2="600" />
-          <line class="grid-line v-line" x1="880" y1="0" x2="880" y2="600" />
-          <text class="grid-text" x="10" y="54">+3.50m</text>
-          <text class="grid-text" x="10" y="124">+2.15m</text>
-          <text class="grid-text" x="10" y="204">+0.80m</text>
-          <text class="grid-text" x="10" y="304">-1.20m</text>
-          <text class="grid-text" x="10" y="424">-2.85m</text>
-          <text class="grid-text" x="10" y="554">-4.30m</text>
-          <text class="grid-text" x="50" y="20">A</text>
-          <text class="grid-text" x="180" y="20">B</text>
-          <text class="grid-text" x="350" y="20">C</text>
-          <text class="grid-text" x="520" y="20">D</text>
-          <text class="grid-text" x="700" y="20">E</text>
-          <text class="grid-text" x="880" y="20">F</text>
-          <circle class="grid-point" cx="700" cy="200" r="8" />
-          <line class="grid-point-line" x1="700" y1="200" x2="740" y2="200" />
-          <line class="grid-point-line" x1="700" y1="200" x2="700" y2="240" />
-          <text class="grid-text" x="745" y="205">REF.01</text>
-        </svg>
-      </div>
-      
-      <div class="container hero-grid">
+      <div class="hero-texture" style="background-image: url('assets/texture-topographic-contour.svg');" aria-hidden="true"></div>
+
+      <div class="container">
         <div class="hero-content">
-          <div class="badge-line">
-            <span class="line-decoration"></span>
-            <span class="mono-badge">GEOTECNIA · INFRAESTRUTURA</span>
-          </div>
-          
-          <h1>Conhecemos o chão<br>que você constrói.</h1>
-          
-          <span class="accent-line"></span>
-          
-          <p>
-            Sua expansão exige segurança desde a base. 
-            Nossa geotecnia transforma incertezas do subsolo 
-            em fundações estáveis.
-          </p>
-
-          <p>
-            Relatórios executivos que orientam 
-            decisões estratégicas precisas.
-          </p>
-          
+          <h1>Engenharia geotécnica<br>de precisão.</h1>
+          <p class="hero-tagline">Fundações que sustentam grandes decisões.</p>
           <div class="hero-actions">
-            <a class="btn primary" href="contato.html">Agendar diagnóstico</a>
-            <a class="btn ghost" href="servicos.html">Ver serviços</a>
-          </div>
-        </div>
-        
-        <div class="hero-card">
-          <div class="card-badge">CREA-SP</div>
-          <div class="metric">
-            <svg class="metric-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2,22V4c0-1.1,0.9-2,2-2h16c1.1,0,2,0.9,2,2v18l-4-4l-4,4l-4-4L6,22c-1.1,0,0.1,0-1,0S2,22,2,22z" />
-              <path d="M4,10h16 M4,16h16 M9,4v8 M15,4v8" />
-            </svg>
-            <div>
-              <strong>Investigação de solo</strong>
-              <span class="metric-detail">SPT, CPT e ensaios triaxiais com interpretação técnica</span>
-            </div>
-          </div>
-          <div class="metric">
-            <svg class="metric-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3,21V3h18v18H3z M3,3L21,21 M3,21L21,3" />
-              <path d="M12,12m-2,0a2,2 0 1,0 4,0a2,2 0 1,0 -4,0" />
-            </svg>
-            <div>
-              <strong>Estabilidade estrutural</strong>
-              <span class="metric-detail">Dimensionamento de taludes e contenções com fator de segurança</span>
-            </div>
-          </div>
-          <div class="metric">
-            <svg class="metric-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14,2H6C4.9,2,4,2.9,4,4v16c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2V8L14,2z" />
-              <path d="M14,8V2 M8,14h8 M8,18h8" />
-            </svg>
-            <div>
-              <strong>Relatórios executivos</strong>
-              <span class="metric-detail">Dados críticos convertidos em recomendações acionáveis</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="hero-footer">
-        <div class="container">
-          <div class="stats-row">
-            <div class="stat-item">15+ anos de projetos</div>
-            <div class="stat-item">Geotecnia · Fundações · Infraestrutura</div>
-            <div class="stat-item">100% de responsabilidade técnica</div>
+            <a class="btn primary" href="projetos.html">Ver nossos projetos</a>
+            <a class="btn ghost" href="contato.html">Fale conosco</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section full-bleed strata-image">
-      <div class="container split">
-        <div data-reveal class="reveal">
-          <h2>Quem conhece a base<br>constrói com segurança</h2>
-          
-          <p class="lead">
-            Grandes projetos de expansão dependem de um subsolo 
-            analisado com precisão técnica.
-          </p>
-
-          <p class="lead">
-            Fornecemos a base confiável que sua obra exige, traduzindo 
-            complexidade geotécnica em recomendações executivas.
-          </p>
-
-          <div class="spacer"></div>
-
-          <div class="highlight">
-            <div class="card">
-              <h3>Decisão sem ruído</h3>
-              <p>
-                Relatórios técnicos com hierarquia clara de riscos e ações. 
-                Aprovações mais ágeis, menos incerteza.
-              </p>
-            </div>
-            <div class="card">
-              <h3>Credibilidade visível</h3>
-              <p>
-                Comunicação técnica precisa e rigor metodológico que transmitem 
-                confiança para stakeholders críticos.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="layer-graphic reveal" data-reveal>
-          <h3>Camadas que sustentam decisões</h3>
-          <p class="lead">Do estudo estratigráfico à interpretação do NSPT: cada camada analisada é uma camada de risco controlada.</p>
-          <div class="layer-stack">
-            <div class="layer"></div>
-            <div class="layer"></div>
-            <div class="layer"></div>
-            <div class="layer"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
+    <!-- ========== 2. INTRO STATEMENT ========== -->
     <section class="section">
       <div class="container">
-        <h2>Serviços que sustentam<br>a expansão</h2>
-        
-        <p class="lead">
-          Base técnica para decisores que precisam garantir segurança 
-          em investimentos de alto valor.
-        </p>
+        <div class="section-intro" data-reveal>
+          <h2>Construímos segurança<br>desde a base</h2>
+          <p class="lead">
+            Grandes projetos de expansão dependem de um subsolo 
+            analisado com precisão técnica. Fornecemos a base confiável 
+            que sua obra exige.
+          </p>
+          <p class="lead">
+            Traduzimos complexidade geotécnica em recomendações 
+            executivas — decisões mais ágeis, menos incerteza.
+          </p>
+        </div>
+      </div>
+    </section>
 
-        <div class="grid three reveal" data-reveal>
+    <!-- ========== 3. FEATURED PROJECTS — grid 2 cols ========== -->
+    <section class="section alt">
+      <div class="container">
+        <div class="section-intro" data-reveal>
+          <h2>Projetos em destaque</h2>
+          <p class="lead">
+            Casos que demonstram como investigação geotécnica rigorosa 
+            impacta o sucesso de expansões corporativas.
+          </p>
+        </div>
+
+        <div class="grid two" data-reveal>
+          <div class="project-card">
+            <div class="project-card-image">
+              <img src="assets/infra.jpg" alt="Infraestrutura para condomínio logístico" />
+            </div>
+            <div class="project-card-body">
+              <span class="tag">Loteamentos</span>
+              <h3>Infraestrutura para condomínio logístico</h3>
+              <p>Investigação SPT/CPT e dimensionamento que reduziram 18% dos custos de execução.</p>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-card-image">
+              <img src="assets/strata.jpg" alt="Estabilidade para expansão industrial" />
+            </div>
+            <div class="project-card-body">
+              <span class="tag">Indústria</span>
+              <h3>Estabilidade para expansão industrial</h3>
+              <p>Análise de taludes e contenções em terreno com alta declividade.</p>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-card-image">
+              <img src="assets/soil-photo-1.jpg" alt="Expansão comercial com base segura" />
+            </div>
+            <div class="project-card-body">
+              <span class="tag">Atacadistas</span>
+              <h3>Expansão comercial com base segura</h3>
+              <p>Documentação geotécnica que acelerou licenciamento e viabilizou fundações otimizadas.</p>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-card-image">
+              <img src="assets/soil-photo-2.jpg" alt="Base para empreendimento residencial" />
+            </div>
+            <div class="project-card-body">
+              <span class="tag">Condomínios</span>
+              <h3>Base para empreendimento residencial</h3>
+              <p>Avaliação completa com ensaios SPT e otimização de fundações profundas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 4. SERVICES — grid 3 cols ========== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-intro" data-reveal>
+          <h2>Nossos serviços</h2>
+          <p class="lead">
+            Base técnica para decisores que precisam garantir segurança 
+            em investimentos de alto valor.
+          </p>
+        </div>
+
+        <div class="grid three" data-reveal>
           <div class="card">
-            <span class="tag">Geotecnia</span>
             <h3>Estudos de base</h3>
             <p>
-              Investigação geotécnica com sondagens SPT, ensaios de campo 
-              e laboratoriais que reduzem imprevistos na execução.
+              Investigação geotécnica com sondagens SPT, 
+              ensaios de campo e laboratoriais que 
+              reduzem imprevistos na execução.
             </p>
           </div>
           <div class="card">
-            <span class="tag">Infraestrutura</span>
             <h3>Projetos para expansão</h3>
             <p>
-              Dimensionamento geotécnico e infraestrutura com especificações 
-              técnicas para loteamentos e plantas industriais.
+              Dimensionamento geotécnico e infraestrutura 
+              com especificações técnicas para loteamentos 
+              e plantas industriais.
             </p>
           </div>
           <div class="card">
-            <span class="tag">Governança</span>
             <h3>Laudos e pareceres</h3>
             <p>
-              Documentação técnica e ART para aprovação, licenciamento 
-              ambiental e conformidade normativa.
+              Documentação técnica e ART para aprovação, 
+              licenciamento ambiental e conformidade 
+              normativa.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section full-bleed infra-image">
-      <div class="container split">
-        <div data-reveal class="reveal">
-          <h2>Processo orientado<br>à segurança</h2>
-          
-          <p class="lead">
-            Metodologia estruturada que transforma dados técnicos 
-            em suporte para decisões executivas.
-          </p>
-
-          <div class="spacer"></div>
-
-          <div class="timeline">
-            <div class="timeline-item">
-              <strong>Diagnóstico da base</strong>
-              <p>
-                Avaliação preliminar das condições do solo e alinhamento 
-                com os parâmetros críticos do projeto.
-              </p>
-            </div>
-            <div class="timeline-item">
-              <strong>Investigação e modelagem</strong>
-              <p>
-                Ensaios in situ, caracterização do solo e modelagem 
-                geotécnica para quantificar riscos.
-              </p>
-            </div>
-            <div class="timeline-item">
-              <strong>Entrega para decisão</strong>
-              <p>
-                Relatórios executivos com hierarquia de riscos, 
-                recomendações e especificações precisas.
-              </p>
-            </div>
+    <!-- ========== 5. STATS ========== -->
+    <section class="section alt">
+      <div class="container">
+        <div class="stats-grid" data-reveal>
+          <div class="stat-item">
+            <div class="stat-number">15+</div>
+            <div class="stat-label">Anos de projetos geotécnicos</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">87%</div>
+            <div class="stat-label">Riscos identificados em fase preliminar</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">40%</div>
+            <div class="stat-label">Redução no tempo de aprovação</div>
           </div>
         </div>
-        <div class="cta reveal" data-reveal>
-          <h3>Construa com segurança<br>desde a base</h3>
-          
-          <p>
-            Expansões bem-sucedidas começam com geotecnia rigorosa.
-          </p>
+      </div>
+    </section>
 
-          <p>
-            Antes de avançar, obtenha uma análise técnica 
-            das condições do solo.
-          </p>
-
-          <a class="btn primary" href="contato.html">Solicitar diagnóstico técnico</a>
-        </div>
+    <!-- ========== 6. CTA FINAL ========== -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Construa com segurança<br>desde a base.</h2>
+        <p>
+          Expansões bem-sucedidas começam com geotecnia rigorosa. 
+          Solicite um diagnóstico técnico.
+        </p>
+        <a class="btn primary" href="contato.html">Solicitar diagnóstico técnico</a>
       </div>
     </section>
   </main>
 
+  <!-- ========== 7. FOOTER — 4 colunas ========== -->
   <footer class="footer">
+    <div class="footer-texture" aria-hidden="true"></div>
     <div class="container">
-      <span>© 2026 Serra do Mar Engenharia. Todos os direitos reservados.</span>
-      <span>Engenharia de base para expansão segura.</span>
+      <div class="footer-grid">
+        <div>
+          <span class="footer-brand">Serra do Mar Engenharia</span>
+          <p class="footer-desc">
+            Engenharia geotécnica e infraestrutura 
+            para projetos de alta criticidade.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h5>Serviços</h5>
+          <a href="servicos.html">Estudos de base</a>
+          <a href="servicos.html">Projetos geotécnicos</a>
+          <a href="servicos.html">Laudos e pareceres</a>
+          <a href="servicos.html">Consultoria</a>
+        </div>
+        <div class="footer-col">
+          <h5>Empresa</h5>
+          <a href="sobre.html">Sobre nós</a>
+          <a href="projetos.html">Projetos</a>
+          <a href="insights.html">Insights</a>
+        </div>
+        <div class="footer-col">
+          <h5>Contato</h5>
+          <a href="contato.html">Fale conosco</a>
+          <a href="mailto:contato@serradomar.com.br">contato@serradomar.com.br</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Serra do Mar Engenharia. Todos os direitos reservados.</span>
+        <span>Engenharia de base para expansão segura.</span>
+      </div>
     </div>
   </footer>
 

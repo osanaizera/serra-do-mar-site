@@ -1,5 +1,6 @@
 /* ============================================================
    Serra do Mar Engenharia — app.js
+   Redesign Editorial
    ============================================================ */
 
 /* ------ Reveal on scroll ------ */
@@ -12,7 +13,7 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.15 }
+  { threshold: 0.1 }
 );
 revealItems.forEach((item) => observer.observe(item));
 
@@ -32,12 +33,10 @@ revealItems.forEach((item) => observer.observe(item));
 
   hamburger.addEventListener("click", () => toggleMenu());
 
-  // Close when any link is clicked
   mobileMenu.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => toggleMenu(false));
   });
 
-  // Close on Escape key
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") toggleMenu(false);
   });
@@ -62,7 +61,6 @@ revealItems.forEach((item) => observer.observe(item));
     msgEl.textContent = "";
   }
 
-  // Basic client-side validation
   function validate() {
     const nome  = form.querySelector('[name="nome"]').value.trim();
     const email = form.querySelector('[name="email"]').value.trim();
@@ -108,7 +106,7 @@ revealItems.forEach((item) => observer.observe(item));
       setMessage("error", "Sem conexão. Verifique sua internet e tente novamente.");
     } finally {
       submitBtn.disabled = false;
-      submitBtn.textContent = "Enviar mensagem";
+      submitBtn.textContent = "Solicitar diagnóstico técnico";
     }
   });
 })();

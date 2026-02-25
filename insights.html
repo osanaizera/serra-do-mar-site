@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="assets/logo-transparente.png" type="image/png" />
 
-  <!-- Schema.org — Blog / insights -->
+  <!-- Schema.org -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -59,14 +59,14 @@
     <a href="projetos.html">Projetos</a>
     <a href="insights.html">Insights</a>
     <a href="contato.html">Contato</a>
-    <a class="btn primary" href="contato.html">Agendar diagnóstico</a>
+    <a class="btn primary" href="contato.html">Fale conosco</a>
   </div>
 
   <header class="header">
     <div class="container nav">
       <a class="brand" href="index.html">
         <img src="assets/logo-transparente.png" alt="Serra do Mar Engenharia" />
-        <span>Serra do Mar Engenharia</span>
+        <span>Serra do Mar</span>
       </a>
       <nav class="nav-links" aria-label="Navegação principal">
         <a href="sobre.html">Sobre</a>
@@ -75,7 +75,7 @@
         <a href="insights.html">Insights</a>
         <a href="contato.html">Contato</a>
       </nav>
-      <a class="btn primary" href="contato.html">Agendar diagnóstico</a>
+      <a class="btn primary" href="contato.html">Fale conosco</a>
       <button id="hamburger" class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
         <span></span><span></span><span></span>
       </button>
@@ -83,43 +83,42 @@
   </header>
 
   <main>
-    <section class="hero full-bleed geo-grid-image">
-      <div class="container hero-grid">
-        <div>
-          <span class="badge">Conteúdo técnico estratégico</span>
-          <h1>Insights que conectam geotecnia às decisões de expansão.</h1>
-          
-          <p>
-            Informação técnica traduzida em linguagem executiva 
-            para quem precisa compreender como o subsolo impacta 
-            estratégias de investimento.
-          </p>
-        </div>
-        <div class="hero-card reveal" data-reveal>
-          <strong>Estratégia editorial</strong>
-          <p class="lead" style="color:var(--muted);">
-            Conhecimento geotécnico traduzido em valor estratégico 
-            para tomadores de decisão.
-          </p>
+    <!-- ========== HERO SUB ========== -->
+    <section class="hero-sub">
+      <div class="hero-texture" style="background-image: url('assets/texture-geological-grid.svg');" aria-hidden="true"></div>
+      <div class="container">
+        <span class="badge">Conteúdo técnico estratégico</span>
+        <h1>Insights que conectam geotecnia às decisões de expansão.</h1>
+        <p>
+          Informação técnica traduzida em linguagem executiva 
+          para quem precisa compreender como o subsolo impacta 
+          estratégias de investimento.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== PULL QUOTE ========== -->
+    <section class="section">
+      <div class="container">
+        <div class="pull-quote" data-reveal>
+          Cada 1% investido em investigação geotécnica preliminar 
+          pode evitar até 12% em custos imprevistos durante a execução.
         </div>
       </div>
     </section>
 
-    <section class="section full-bleed strata-image">
+    <!-- ========== ARTICLES GRID ========== -->
+    <section class="section alt">
       <div class="container">
-        <h2>Publicações técnicas</h2>
-        
-        <p class="lead">
-          Análises que auxiliam decisores em momentos críticos 
-          de avaliação e planejamento.
-        </p>
-
-        <div class="pull-quote">
-          Cada 1% investido em investigação geotécnica preliminar 
-          pode evitar até 12% em custos imprevistos durante a execução.
+        <div class="section-intro" data-reveal>
+          <h2>Publicações técnicas</h2>
+          <p class="lead">
+            Análises que auxiliam decisores em momentos críticos 
+            de avaliação e planejamento.
+          </p>
         </div>
 
-        <div class="grid two reveal" data-reveal>
+        <div class="grid two" data-reveal>
           <div class="card">
             <h3>Riscos geotécnicos em expansões industriais</h3>
             <p>
@@ -131,8 +130,9 @@
           <div class="card">
             <h3>Infraestrutura para loteamentos</h3>
             <p>
-              Casos práticos onde investigação preliminar identificou 
-              condições que modificaram o escopo antes da execução.
+              Casos práticos onde investigação preliminar 
+              identificou condições que modificaram o escopo 
+              antes da execução.
             </p>
           </div>
           <div class="card">
@@ -145,20 +145,63 @@
           <div class="card">
             <h3>Relatórios que aceleram aprovações</h3>
             <p>
-              Framework de comunicação técnica que hierarquiza dados 
-              e apresenta soluções parametrizadas para diferentes 
-              níveis organizacionais.
+              Framework de comunicação técnica que hierarquiza 
+              dados e apresenta soluções parametrizadas para 
+              diferentes níveis organizacionais.
             </p>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- ========== CTA ========== -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Quer aplicar esses insights<br>ao seu projeto?</h2>
+        <p>
+          Converse com nossa equipe técnica e descubra como 
+          podemos ajudar na sua expansão.
+        </p>
+        <a class="btn primary" href="contato.html">Fale conosco</a>
+      </div>
+    </section>
   </main>
 
+  <!-- ========== FOOTER ========== -->
   <footer class="footer">
+    <div class="footer-texture" aria-hidden="true"></div>
     <div class="container">
-      <span>© 2026 Serra do Mar Engenharia. Todos os direitos reservados.</span>
-      <span>Conhecemos o chão que você constrói.</span>
+      <div class="footer-grid">
+        <div>
+          <span class="footer-brand">Serra do Mar Engenharia</span>
+          <p class="footer-desc">
+            Engenharia geotécnica e infraestrutura 
+            para projetos de alta criticidade.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h5>Serviços</h5>
+          <a href="servicos.html">Estudos de base</a>
+          <a href="servicos.html">Projetos geotécnicos</a>
+          <a href="servicos.html">Laudos e pareceres</a>
+          <a href="servicos.html">Consultoria</a>
+        </div>
+        <div class="footer-col">
+          <h5>Empresa</h5>
+          <a href="sobre.html">Sobre nós</a>
+          <a href="projetos.html">Projetos</a>
+          <a href="insights.html">Insights</a>
+        </div>
+        <div class="footer-col">
+          <h5>Contato</h5>
+          <a href="contato.html">Fale conosco</a>
+          <a href="mailto:contato@serradomar.com.br">contato@serradomar.com.br</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Serra do Mar Engenharia. Todos os direitos reservados.</span>
+        <span>Conhecemos o chão que você constrói.</span>
+      </div>
     </div>
   </footer>
 

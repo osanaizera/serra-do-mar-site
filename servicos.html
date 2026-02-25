@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="assets/logo-transparente.png" type="image/png" />
 
-  <!-- Schema.org — Service offerings -->
+  <!-- Schema.org -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -71,14 +71,14 @@
     <a href="projetos.html">Projetos</a>
     <a href="insights.html">Insights</a>
     <a href="contato.html">Contato</a>
-    <a class="btn primary" href="contato.html">Agendar diagnóstico</a>
+    <a class="btn primary" href="contato.html">Fale conosco</a>
   </div>
 
   <header class="header">
     <div class="container nav">
       <a class="brand" href="index.html">
         <img src="assets/logo-transparente.png" alt="Serra do Mar Engenharia" />
-        <span>Serra do Mar Engenharia</span>
+        <span>Serra do Mar</span>
       </a>
       <nav class="nav-links" aria-label="Navegação principal">
         <a href="sobre.html">Sobre</a>
@@ -87,7 +87,7 @@
         <a href="insights.html">Insights</a>
         <a href="contato.html">Contato</a>
       </nav>
-      <a class="btn primary" href="contato.html">Agendar diagnóstico</a>
+      <a class="btn primary" href="contato.html">Fale conosco</a>
       <button id="hamburger" class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
         <span></span><span></span><span></span>
       </button>
@@ -95,68 +95,62 @@
   </header>
 
   <main>
-    <section class="hero full-bleed infra-image">
-      <div class="container hero-grid">
-        <div>
-          <span class="badge">Base · Infraestrutura · Geotecnia</span>
-          <h1>Serviços que transformam incertezas do solo em decisões seguras.</h1>
-          
-          <p>
-            Sua expansão não pode enfrentar surpresas na fundação.
-          </p>
-
-          <p>
-            Nossos serviços geotécnicos identificam riscos ocultos no subsolo 
-            e fornecem parâmetros técnicos para cada etapa do projeto.
-          </p>
-        </div>
-        <div class="hero-card reveal" data-reveal>
-          <strong>Segmentos atendidos</strong>
-          <p class="lead" style="color:var(--muted);">
-            Diretores de expansão e C-level de empresas 
-            com investimentos críticos em infraestrutura.
-          </p>
-          <span class="tag">Incorporadoras · Indústrias · Loteadoras · Atacadistas</span>
-        </div>
+    <!-- ========== HERO SUB ========== -->
+    <section class="hero-sub">
+      <div class="hero-texture" style="background-image: url('assets/texture-sondagem-profile.svg');" aria-hidden="true"></div>
+      <div class="container">
+        <span class="badge">Base · Infraestrutura · Geotecnia</span>
+        <h1>Serviços que transformam incertezas em decisões seguras.</h1>
+        <p>
+          Sua expansão não pode enfrentar surpresas na fundação. 
+          Nossos serviços geotécnicos identificam riscos ocultos 
+          e fornecem parâmetros técnicos precisos.
+        </p>
       </div>
     </section>
 
-    <section class="section full-bleed strata-image">
+    <!-- ========== SERVICE GRID ========== -->
+    <section class="section">
       <div class="container">
-        <h2>Portfólio de serviços</h2>
-        
-        <p class="lead">
-          Soluções geotécnicas e de infraestrutura com foco 
-          na mitigação de riscos e viabilização técnica.
-        </p>
+        <div class="section-intro" data-reveal>
+          <h2>Portfólio de serviços</h2>
+          <p class="lead">
+            Soluções geotécnicas e de infraestrutura com foco 
+            na mitigação de riscos e viabilização técnica.
+          </p>
+        </div>
 
-        <div class="grid three reveal" data-reveal>
+        <div class="grid three" data-reveal>
           <div class="card">
             <h3>Investigação de base</h3>
             <p>
-              Caracterização geotécnica através de sondagens SPT, CPT 
-              e análise estratigráfica para fundamentar decisões.
+              Caracterização geotécnica através de sondagens 
+              SPT, CPT e análise estratigráfica para 
+              fundamentar decisões.
             </p>
           </div>
           <div class="card">
             <h3>Projetos geotécnicos</h3>
             <p>
-              Dimensionamento de fundações, contenções e análise 
-              de estabilidade com parâmetros normatizados.
+              Dimensionamento de fundações, contenções e 
+              análise de estabilidade com parâmetros 
+              normatizados.
             </p>
           </div>
           <div class="card">
             <h3>Infraestrutura de expansão</h3>
             <p>
-              Terraplenagem, drenagem, pavimentação e redes subterrâneas 
-              para loteamentos e plantas industriais.
+              Terraplenagem, drenagem, pavimentação e redes 
+              subterrâneas para loteamentos e plantas 
+              industriais.
             </p>
           </div>
           <div class="card">
             <h3>Laudos executivos</h3>
             <p>
               Documentação técnica com ART para licenciamentos 
-              e decisões críticas. Linguagem acessível.
+              e decisões críticas. Linguagem acessível 
+              para stakeholders.
             </p>
           </div>
           <div class="card">
@@ -170,67 +164,107 @@
             <h3>Monitoramento de risco</h3>
             <p>
               Instrumentação geotécnica, análise de recalques 
-              e controle de estabilidade em obras críticas.
+              e controle de estabilidade em obras 
+              críticas.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container split">
-        <div data-reveal class="reveal">
-          <h2>Como entregamos valor</h2>
-          
-          <p class="lead">
-            Nossa metodologia transforma dados técnicos em valor estratégico, 
-            acelerando aprovações e minimizando imprevistos.
-          </p>
+    <!-- ========== METHODOLOGY ========== -->
+    <section class="section alt">
+      <div class="container">
+        <div class="split">
+          <div data-reveal class="reveal">
+            <h2>Como entregamos valor</h2>
+            <p class="lead">
+              Metodologia que transforma dados técnicos 
+              em valor estratégico, acelerando aprovações 
+              e minimizando imprevistos.
+            </p>
 
-          <div class="spacer"></div>
+            <div class="spacer-sm"></div>
 
-          <div class="timeline">
-            <div class="timeline-item">
-              <strong>Contexto da expansão</strong>
-              <p>
-                Compreensão dos parâmetros estratégicos, marcos críticos 
-                e tolerâncias a risco do empreendimento.
-              </p>
-            </div>
-            <div class="timeline-item">
-              <strong>Diagnóstico de base</strong>
-              <p>
-                Investigação com métodos normatizados (NBR 6484, NBR 7250) 
-                para caracterização completa do subsolo.
-              </p>
-            </div>
-            <div class="timeline-item">
-              <strong>Entrega executiva</strong>
-              <p>
-                Documentação com sumário executivo que hierarquiza riscos, 
-                recomendações e especificações para execução.
-              </p>
+            <div class="timeline">
+              <div class="timeline-item">
+                <strong>Contexto da expansão</strong>
+                <p>
+                  Compreensão dos parâmetros estratégicos, 
+                  marcos críticos e tolerâncias a risco 
+                  do empreendimento.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <strong>Diagnóstico de base</strong>
+                <p>
+                  Investigação com métodos normatizados 
+                  (NBR 6484, NBR 7250) para caracterização 
+                  completa do subsolo.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <strong>Entrega executiva</strong>
+                <p>
+                  Documentação com sumário executivo que 
+                  hierarquiza riscos, recomendações e 
+                  especificações para execução.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="cta reveal" data-reveal>
-          <h3>Sua expansão está sobre<br>terreno seguro?</h3>
-          
-          <p>
-            Antes de avançar com seu investimento, obtenha um diagnóstico 
-            técnico que pode evitar custos imprevistos.
-          </p>
-          
-          <a class="btn primary" href="contato.html">Solicitar diagnóstico geotécnico</a>
+
+          <div class="reveal" data-reveal>
+            <div class="cta-card">
+              <h3>Sua expansão está sobre<br>terreno seguro?</h3>
+              <p>
+                Antes de avançar com seu investimento, 
+                obtenha um diagnóstico técnico que pode 
+                evitar custos imprevistos.
+              </p>
+              <a class="btn primary" href="contato.html">Solicitar diagnóstico geotécnico</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- ========== FOOTER ========== -->
   <footer class="footer">
+    <div class="footer-texture" aria-hidden="true"></div>
     <div class="container">
-      <span>© 2026 Serra do Mar Engenharia. Todos os direitos reservados.</span>
-      <span>Conhecemos o chão que você constrói.</span>
+      <div class="footer-grid">
+        <div>
+          <span class="footer-brand">Serra do Mar Engenharia</span>
+          <p class="footer-desc">
+            Engenharia geotécnica e infraestrutura 
+            para projetos de alta criticidade.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h5>Serviços</h5>
+          <a href="servicos.html">Estudos de base</a>
+          <a href="servicos.html">Projetos geotécnicos</a>
+          <a href="servicos.html">Laudos e pareceres</a>
+          <a href="servicos.html">Consultoria</a>
+        </div>
+        <div class="footer-col">
+          <h5>Empresa</h5>
+          <a href="sobre.html">Sobre nós</a>
+          <a href="projetos.html">Projetos</a>
+          <a href="insights.html">Insights</a>
+        </div>
+        <div class="footer-col">
+          <h5>Contato</h5>
+          <a href="contato.html">Fale conosco</a>
+          <a href="mailto:contato@serradomar.com.br">contato@serradomar.com.br</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Serra do Mar Engenharia. Todos os direitos reservados.</span>
+        <span>Conhecemos o chão que você constrói.</span>
+      </div>
     </div>
   </footer>
 
