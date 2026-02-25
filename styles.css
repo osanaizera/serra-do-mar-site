@@ -1,7 +1,8 @@
 /* ============================================================
-   Serra do Mar Engenharia — Redesign Editorial
-   Inspired by Arup, AECOM, Buro Happold, WSP
-   Apple meets architecture magazine
+   Serra do Mar Engenharia — Identidade Visual Completa
+   Arquétipos: Sage 88% + Ruler 70%
+   Tom: Dark, Editorial, Técnico, Premium
+   Conceito: Camadas/Engenharia — estratificação do solo
    ============================================================ */
 
 /* ============================================================
@@ -10,40 +11,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
 
 /* ============================================================
-   Design Tokens
+   Design Tokens — Paleta Serra do Mar
    ============================================================ */
 :root {
-  /* Neutrals */
-  --white: #ffffff;
-  --gray-50: #fafafa;
-  --gray-100: #f5f5f5;
-  --gray-200: #e5e5e5;
-  --gray-300: #d4d4d4;
-  --gray-400: #a3a3a3;
-  --gray-500: #737373;
-  --gray-600: #525252;
-  --gray-700: #404040;
-  --gray-800: #1a1a1a;
-  --black: #0a0a0a;
+  /* === PALETA DA MARCA === */
+  --primary: #1B2B48;          /* Azul técnico profundo */
+  --primary-light: #2E5B86;    /* Azul intermediário */
+  --primary-dark: #0F172A;     /* Azul escuro / neutral */
+  --secondary: #368967;        /* Verde engenharia (2-7%) */
+  --secondary-dark: #2A6B53;   /* Verde escuro */
+  --accent: #F58A34;           /* Laranja acento (1-3% APENAS) */
+  --neutral: #0F172A;          /* Azul escuro neutro */
+  --background: #0B1220;       /* Background base */
+  --text: #F3F4F5;             /* Texto principal */
+  --text-muted: #D1D5DA;       /* Texto secundário */
+  --text-dim: rgba(243, 244, 245, 0.5); /* Texto terciário */
+  --blue-mid: #4A7DBC;         /* Azul médio para destaques */
 
-  /* Brand — desaturated per benchmark */
-  --primary: hsl(210, 25%, 42%);
-  --primary-light: hsl(210, 20%, 95%);
-  --primary-dark: hsl(210, 30%, 32%);
-  --accent: hsl(25, 35%, 48%);
-  --accent-light: hsl(25, 25%, 95%);
-  --earth: hsl(150, 20%, 38%);
-
-  /* Functional */
-  --bg: var(--white);
-  --bg-alt: var(--gray-50);
-  --text: var(--gray-800);
-  --text-muted: var(--gray-500);
-  --text-light: var(--gray-400);
-  --border: rgba(0, 0, 0, 0.08);
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
-  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.05);
-  --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.06);
+  /* Funcionais */
+  --bg: var(--background);
+  --bg-alt: var(--neutral);
+  --border: rgba(243, 244, 245, 0.08);
+  --border-light: rgba(243, 244, 245, 0.12);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.4);
 
   /* Layout */
   --container-max: 1400px;
@@ -80,12 +72,13 @@ a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; }
 
 /* ============================================================
-   Typography — Editorial hierarchy
+   Typography — Editorial hierarchy (Sage + Ruler)
    ============================================================ */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", system-ui, sans-serif;
+  font-weight: 700;
   line-height: 1.15;
-  color: var(--black);
+  color: var(--text);
 }
 
 h1 {
@@ -124,6 +117,18 @@ p {
 }
 
 /* ============================================================
+   Photography — Editorial Cool + Dessaturada
+   ============================================================ */
+.hero-bg img,
+.project-card-image img,
+.full-bleed img {
+  filter:
+    brightness(0.9)
+    contrast(1.65)
+    saturate(0.35);
+}
+
+/* ============================================================
    Layout
    ============================================================ */
 .container {
@@ -135,13 +140,13 @@ p {
 }
 
 /* ============================================================
-   Header & Nav — minimal, sticky, white
+   Header & Nav — dark, sticky
    ============================================================ */
 .header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(11, 18, 32, 0.92);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
@@ -164,7 +169,7 @@ p {
   font-weight: 600;
   font-size: 0.9rem;
   letter-spacing: -0.01em;
-  color: var(--black);
+  color: var(--text);
   flex-shrink: 0;
 }
 
@@ -195,17 +200,17 @@ p {
   left: 0;
   width: 100%;
   height: 1.5px;
-  background: var(--primary);
+  background: var(--secondary);
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.25s ease;
 }
 
-.nav-links a:hover { color: var(--black); }
+.nav-links a:hover { color: var(--text); }
 .nav-links a:hover::after { transform: scaleX(1); transform-origin: left; }
 
 /* ============================================================
-   Hamburger — Mobile Nav
+   Hamburger — Mobile Nav (dark)
    ============================================================ */
 .hamburger {
   display: none;
@@ -227,7 +232,7 @@ p {
   display: block;
   width: 100%;
   height: 1.5px;
-  background: var(--black);
+  background: var(--text);
   border-radius: 2px;
   transition: transform 0.3s ease, opacity 0.3s ease;
   transform-origin: center;
@@ -242,7 +247,7 @@ p {
   position: fixed;
   inset: 0;
   z-index: 99;
-  background: rgba(255, 255, 255, 0.98);
+  background: rgba(11, 18, 32, 0.98);
   backdrop-filter: blur(20px);
   flex-direction: column;
   align-items: center;
@@ -262,11 +267,11 @@ p {
   font-family: "Montserrat", sans-serif;
   font-size: 1.4rem;
   font-weight: 300;
-  color: var(--black);
+  color: var(--text);
   letter-spacing: -0.01em;
 }
 
-.mobile-menu a:hover { color: var(--primary); }
+.mobile-menu a:hover { color: var(--secondary); }
 
 .mobile-menu .btn { margin-top: 1rem; }
 
@@ -278,7 +283,7 @@ p {
 }
 
 /* ============================================================
-   Buttons — refined, editorial
+   Buttons — Sage + Ruler: sóbrio, preciso
    ============================================================ */
 .btn {
   padding: 0.85rem 2rem;
@@ -295,40 +300,41 @@ p {
   letter-spacing: 0.01em;
 }
 
+/* CTA principal — LARANJA (1-3% do site) */
 .btn.primary {
-  background: var(--black);
-  color: var(--white);
-  border-color: var(--black);
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
 }
 
 .btn.primary:hover {
-  background: var(--gray-700);
-  border-color: var(--gray-700);
+  background: #e07a28;
+  border-color: #e07a28;
   transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 4px 20px rgba(245, 138, 52, 0.25);
 }
 
 .btn.ghost {
-  border-color: var(--border);
+  border-color: var(--border-light);
   color: var(--text-muted);
   background: transparent;
 }
 
 .btn.ghost:hover {
-  border-color: var(--gray-300);
-  color: var(--black);
-  background: var(--gray-50);
+  border-color: rgba(243, 244, 245, 0.3);
+  color: var(--text);
+  background: rgba(243, 244, 245, 0.05);
 }
 
 .btn.primary-accent {
   background: var(--primary);
-  color: var(--white);
+  color: var(--text);
   border-color: var(--primary);
 }
 
 .btn.primary-accent:hover {
-  background: var(--primary-dark);
-  border-color: var(--primary-dark);
+  background: var(--primary-light);
+  border-color: var(--primary-light);
   transform: translateY(-1px);
   box-shadow: var(--shadow-md);
 }
@@ -342,7 +348,7 @@ p {
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: var(--black);
+  background: var(--background);
 }
 
 .hero-bg {
@@ -365,9 +371,9 @@ p {
   inset: 0;
   background: linear-gradient(
     to right,
-    rgba(0, 0, 0, 0.7) 0%,
-    rgba(0, 0, 0, 0.4) 50%,
-    rgba(0, 0, 0, 0.2) 100%
+    rgba(11, 18, 32, 0.85) 0%,
+    rgba(11, 18, 32, 0.6) 50%,
+    rgba(11, 18, 32, 0.35) 100%
   );
   z-index: 1;
 }
@@ -378,7 +384,7 @@ p {
   inset: 0;
   background-size: cover;
   background-position: center;
-  opacity: 0.08;
+  opacity: 0.06;
   z-index: 2;
   pointer-events: none;
 }
@@ -394,7 +400,7 @@ p {
 }
 
 .hero h1 {
-  color: var(--white);
+  color: var(--text);
   margin-bottom: 1.5rem;
 }
 
@@ -402,7 +408,7 @@ p {
   font-family: "Inter", sans-serif;
   font-size: 1.15rem;
   font-weight: 300;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--text-muted);
   line-height: 1.7;
   margin-bottom: 3rem;
   max-width: 520px;
@@ -414,46 +420,48 @@ p {
   flex-wrap: wrap;
 }
 
+/* Hero buttons — accent CTA + ghost */
 .hero .btn.primary {
-  background: var(--white);
-  color: var(--black);
-  border-color: var(--white);
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
 }
 
 .hero .btn.primary:hover {
-  background: var(--gray-100);
-  border-color: var(--gray-100);
+  background: #e07a28;
+  border-color: #e07a28;
+  box-shadow: 0 4px 20px rgba(245, 138, 52, 0.3);
 }
 
 .hero .btn.ghost {
-  border-color: rgba(255, 255, 255, 0.3);
-  color: rgba(255, 255, 255, 0.8);
+  border-color: rgba(243, 244, 245, 0.2);
+  color: var(--text-muted);
 }
 
 .hero .btn.ghost:hover {
-  border-color: rgba(255, 255, 255, 0.6);
-  color: var(--white);
-  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(243, 244, 245, 0.4);
+  color: var(--text);
+  background: rgba(243, 244, 245, 0.06);
 }
 
 /* ============================================================
-   Subpage Hero — lighter, editorial
+   Subpage Hero — dark, editorial
    ============================================================ */
 .hero-sub {
   position: relative;
   min-height: auto;
-  background: var(--gray-50);
+  background: var(--primary);
   padding: 8rem 0 6rem;
   display: block;
   overflow: hidden;
 }
 
 .hero-sub .hero-texture {
-  opacity: 0.05;
+  opacity: 0.04;
 }
 
 .hero-sub h1 {
-  color: var(--black);
+  color: var(--text);
   font-size: clamp(2rem, 4.5vw, 3.8rem);
   max-width: var(--content-max);
   margin-bottom: 1.5rem;
@@ -472,12 +480,12 @@ p {
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--primary);
+  color: var(--secondary);
   margin-bottom: 1.5rem;
 }
 
 /* ============================================================
-   Sections — GENEROUS whitespace
+   Sections — GENEROUS whitespace (dark)
    ============================================================ */
 .section {
   padding: var(--section-pad) 0;
@@ -528,24 +536,25 @@ p {
 }
 
 /* ============================================================
-   Cards — clean, airy, minimal borders
+   Cards — dark, subtle borders
    ============================================================ */
 .card {
-  background: var(--white);
+  background: var(--primary);
   border: 1px solid var(--border);
   border-radius: 6px;
   padding: var(--card-pad);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   position: relative;
 }
 
 .card:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-lg);
+  border-color: var(--border-light);
 }
 
 .card h3 {
-  color: var(--black);
+  color: var(--text);
   margin-bottom: 1rem;
 }
 
@@ -555,9 +564,9 @@ p {
   margin-bottom: 0;
 }
 
-/* Project cards — image-first */
+/* Project cards — image-first, dark */
 .project-card {
-  background: var(--white);
+  background: var(--primary);
   border: 1px solid var(--border);
   border-radius: 6px;
   overflow: hidden;
@@ -604,12 +613,12 @@ p {
 .project-card-body .tag {
   font-size: 0.75rem;
   font-weight: 500;
-  color: var(--primary);
+  color: var(--secondary);
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
 
-/* Service cards — text-only, elegant */
+/* Service cards — text-only, dark borders */
 .service-card {
   padding: var(--card-pad);
   border-top: 1px solid var(--border);
@@ -617,7 +626,7 @@ p {
 }
 
 .service-card:hover {
-  background: var(--gray-50);
+  background: rgba(27, 43, 72, 0.3);
 }
 
 .service-card h3 {
@@ -652,7 +661,7 @@ p {
   font-family: "Montserrat", sans-serif;
   font-size: clamp(3rem, 6vw, 5rem);
   font-weight: 800;
-  color: var(--black);
+  color: var(--text);
   letter-spacing: -0.03em;
   line-height: 1;
   margin-bottom: 0.75rem;
@@ -666,17 +675,17 @@ p {
 }
 
 /* ============================================================
-   Pull Quote — editorial element
+   Pull Quote — editorial element (green accent line)
    ============================================================ */
 .pull-quote {
-  border-left: 2px solid var(--primary);
+  border-left: 2px solid var(--secondary);
   padding: 2rem 0 2rem 2.5rem;
   margin: 4rem 0;
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
   font-size: clamp(1.2rem, 2vw, 1.5rem);
   line-height: 1.7;
-  color: var(--black);
+  color: var(--text);
   max-width: 700px;
   letter-spacing: -0.01em;
 }
@@ -701,42 +710,43 @@ p {
 }
 
 /* ============================================================
-   CTA Section
+   CTA Section — dark with accent CTA
    ============================================================ */
 .cta-section {
-  background: var(--black);
+  background: var(--primary);
   padding: var(--section-pad) 0;
   text-align: center;
 }
 
 .cta-section h2 {
-  color: var(--white);
+  color: var(--text);
   margin-bottom: 1.5rem;
 }
 
 .cta-section p {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--text-muted);
   max-width: 600px;
   margin: 0 auto 3rem;
   font-size: 1.1rem;
 }
 
 .cta-section .btn.primary {
-  background: var(--white);
-  color: var(--black);
-  border-color: var(--white);
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
   padding: 1rem 3rem;
   font-size: 0.95rem;
 }
 
 .cta-section .btn.primary:hover {
-  background: var(--gray-100);
-  border-color: var(--gray-100);
+  background: #e07a28;
+  border-color: #e07a28;
+  box-shadow: 0 4px 20px rgba(245, 138, 52, 0.3);
 }
 
 /* Inline CTA card */
 .cta-card {
-  background: var(--gray-50);
+  background: var(--primary);
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: var(--card-pad);
@@ -752,7 +762,7 @@ p {
 }
 
 /* ============================================================
-   Timeline — refined
+   Timeline — refined (green dots)
    ============================================================ */
 .timeline {
   border-left: 1px solid var(--border);
@@ -770,7 +780,7 @@ p {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--primary);
+  background: var(--secondary);
   position: absolute;
   left: -2.85rem;
   top: 0.4rem;
@@ -782,7 +792,7 @@ p {
   font-size: 1.05rem;
   display: block;
   margin-bottom: 0.5rem;
-  color: var(--black);
+  color: var(--text);
 }
 
 .timeline-item p {
@@ -791,7 +801,7 @@ p {
 }
 
 /* ============================================================
-   Team
+   Team (dark cards)
    ============================================================ */
 .team-grid {
   display: grid;
@@ -804,6 +814,7 @@ p {
   padding: 3rem 2rem;
   border: 1px solid var(--border);
   border-radius: 8px;
+  background: var(--primary);
   transition: box-shadow 0.3s ease;
 }
 
@@ -822,22 +833,23 @@ p {
   font-size: 1.2rem;
   font-weight: 700;
   margin: 0 auto 1.5rem;
-  color: var(--white);
+  color: var(--text);
 }
 
-.team-avatar.blue { background: var(--primary); }
-.team-avatar.green { background: var(--earth); }
+.team-avatar.blue { background: var(--blue-mid); }
+.team-avatar.green { background: var(--secondary); }
 
 .team-card h4 {
   font-family: "Montserrat", sans-serif;
   font-size: 1.1rem;
   font-weight: 600;
   margin: 0 0 0.3rem;
+  color: var(--text);
 }
 
 .team-card .role {
   font-size: 0.75rem;
-  color: var(--primary);
+  color: var(--secondary);
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -850,7 +862,7 @@ p {
 }
 
 /* ============================================================
-   Contact Form — clean, light
+   Contact Form — dark
    ============================================================ */
 .form {
   display: grid;
@@ -864,7 +876,7 @@ p {
 }
 
 input, textarea, select {
-  background: var(--white);
+  background: rgba(27, 43, 72, 0.5);
   border: 1px solid var(--border);
   border-radius: 4px;
   padding: 0.9rem 1.1rem;
@@ -879,17 +891,17 @@ input, textarea, select {
 }
 
 input::placeholder, textarea::placeholder {
-  color: var(--text-light);
+  color: var(--text-dim);
 }
 
 input:focus, textarea:focus, select:focus {
   outline: none;
-  border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(90, 120, 160, 0.1);
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 3px rgba(54, 137, 103, 0.15);
 }
 
 select option {
-  background: var(--white);
+  background: var(--neutral);
   color: var(--text);
 }
 
@@ -903,16 +915,16 @@ select option {
 
 .form-message.success {
   display: block;
-  background: hsl(150, 20%, 95%);
-  border: 1px solid hsl(150, 20%, 85%);
-  color: hsl(150, 25%, 30%);
+  background: rgba(54, 137, 103, 0.15);
+  border: 1px solid rgba(54, 137, 103, 0.3);
+  color: #6FCF97;
 }
 
 .form-message.error {
   display: block;
-  background: hsl(0, 40%, 96%);
-  border: 1px solid hsl(0, 40%, 88%);
-  color: hsl(0, 40%, 35%);
+  background: rgba(245, 138, 52, 0.1);
+  border: 1px solid rgba(245, 138, 52, 0.25);
+  color: #F58A34;
 }
 
 .btn[disabled] {
@@ -921,12 +933,12 @@ select option {
 }
 
 /* ============================================================
-   Footer — 4 columns, generous, texture overlay
+   Footer — dark, texture overlay
    ============================================================ */
 .footer {
   position: relative;
-  background: var(--black);
-  color: rgba(255, 255, 255, 0.6);
+  background: var(--neutral);
+  color: var(--text-muted);
   padding: 5rem 0 3rem;
   overflow: hidden;
 }
@@ -935,7 +947,7 @@ select option {
   position: absolute;
   inset: 0;
   background: url("assets/texture-topographic-contour.svg") center/cover no-repeat;
-  opacity: 0.04;
+  opacity: 0.03;
   pointer-events: none;
 }
 
@@ -949,7 +961,7 @@ select option {
   grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 3rem;
   padding-bottom: 3rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--border);
   margin-bottom: 2rem;
 }
 
@@ -957,7 +969,7 @@ select option {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  color: var(--white);
+  color: var(--text);
   margin-bottom: 1rem;
   display: block;
 }
@@ -974,7 +986,7 @@ select option {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--white);
+  color: var(--text);
   margin: 0 0 1.2rem;
 }
 
@@ -985,7 +997,7 @@ select option {
   transition: color 0.2s;
 }
 
-.footer-col a:hover { color: var(--white); }
+.footer-col a:hover { color: var(--secondary); }
 
 .footer-bottom {
   display: flex;
@@ -993,7 +1005,7 @@ select option {
   flex-wrap: wrap;
   gap: 1rem;
   font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--text-dim);
 }
 
 /* ============================================================
@@ -1004,13 +1016,13 @@ select option {
 .spacer-sm { height: 3rem; }
 
 /* ============================================================
-   Tags & Badges
+   Tags & Badges (green accent)
    ============================================================ */
 .tag {
   display: inline-block;
   font-size: 0.75rem;
   font-weight: 500;
-  color: var(--primary);
+  color: var(--secondary);
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
@@ -1022,17 +1034,17 @@ select option {
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--primary);
+  color: var(--secondary);
   margin-bottom: 1.5rem;
 }
 
 /* ============================================================
-   Layer Graphic — Stratigraphy visual
+   Layer Graphic — Stratigraphy visual (brand identity)
    ============================================================ */
 .layer-graphic {
   border-radius: 6px;
   border: 1px solid var(--border);
-  background: var(--gray-50);
+  background: rgba(27, 43, 72, 0.3);
   padding: 2.5rem;
   position: relative;
   overflow: hidden;
@@ -1043,8 +1055,8 @@ select option {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(to right, rgba(0, 0, 0, 0.02) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+    linear-gradient(to right, rgba(243, 244, 245, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(243, 244, 245, 0.02) 1px, transparent 1px);
   background-size: 25px 25px;
   pointer-events: none;
 }
@@ -1052,7 +1064,7 @@ select option {
 .layer-graphic h3 {
   font-weight: 500;
   font-size: 1rem;
-  color: var(--black);
+  color: var(--text);
   margin-bottom: 0.8rem;
 }
 
@@ -1077,23 +1089,24 @@ select option {
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
+/* Soil strata colors using brand palette */
 .layer:nth-child(1) {
-  background: hsl(25, 35%, 70%);
+  background: rgba(245, 138, 52, 0.6);  /* accent earth */
   width: 100%;
 }
 
 .layer:nth-child(2) {
-  background: hsl(210, 25%, 65%);
+  background: var(--blue-mid);
   width: 85%;
 }
 
 .layer:nth-child(3) {
-  background: hsl(150, 20%, 55%);
+  background: var(--secondary);
   width: 70%;
 }
 
 .layer:nth-child(4) {
-  background: var(--gray-300);
+  background: var(--primary-light);
   width: 55%;
 }
 
@@ -1181,12 +1194,12 @@ select option {
 }
 
 /* ============================================================
-   Section divider
+   Section divider (green)
    ============================================================ */
 .divider {
   width: 48px;
   height: 2px;
-  background: var(--primary);
+  background: var(--secondary);
   margin: 0 auto;
   opacity: 0.4;
 }
