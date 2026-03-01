@@ -1342,3 +1342,150 @@ select option {
 
   .layer-graphic { display: none; }
 }
+
+/* ============================================================
+   SETORES — Cards com prioridade visual
+   ============================================================ */
+.sector-card {
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 3rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.sector-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--accent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sector-card:hover {
+  border-color: var(--border-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.sector-card:hover::before {
+  opacity: 1;
+}
+
+/* Destaque por prioridade */
+.sector-card.priority-1,
+.sector-card.priority-2 {
+  background: rgba(27, 43, 72, 0.3);
+  border-width: 2px;
+}
+
+.sector-card.priority-1 .sector-number,
+.sector-card.priority-2 .sector-number {
+  background: linear-gradient(135deg, var(--accent), var(--secondary));
+  font-weight: 700;
+}
+
+.sector-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.sector-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  background: var(--primary);
+  color: var(--text);
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.sector-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.sector-content {
+  padding-left: 5rem;
+}
+
+.sector-description {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.sector-services h4 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.sector-services ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.sector-services li {
+  padding-left: 1.5rem;
+  position: relative;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.sector-services li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .sector-card {
+    padding: 2rem;
+  }
+
+  .sector-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .sector-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .sector-content {
+    padding-left: 0;
+  }
+
+  .sector-description {
+    font-size: 1rem;
+  }
+}
