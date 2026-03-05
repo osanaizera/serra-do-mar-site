@@ -1,0 +1,141 @@
+<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fundo -->
+  <rect width="300" height="200" fill="#0F172A"/>
+  
+  <!-- Camadas de Solo Argiloso -->
+  <g stroke="#4A7DBC" stroke-width="0.5" fill="none">
+    <!-- Camada superior - argila orgânica -->
+    <path d="M0,20 L300,20 L300,60 L0,60 Z" fill="rgba(54,137,103,0.12)" />
+    
+    <!-- Textura argilosa (padrão linear horizontal) -->
+    <g opacity="0.6">
+      <line x1="0" y1="25" x2="300" y2="25" stroke="#4A7DBC" stroke-width="0.3" />
+      <line x1="0" y1="30" x2="300" y2="30" stroke="#4A7DBC" stroke-width="0.3" />
+      <line x1="0" y1="35" x2="300" y2="35" stroke="#4A7DBC" stroke-width="0.3" />
+      <line x1="0" y1="40" x2="300" y2="40" stroke="#4A7DBC" stroke-width="0.3" />
+      <line x1="0" y1="45" x2="300" y2="45" stroke="#4A7DBC" stroke-width="0.3" />
+      <line x1="0" y1="50" x2="300" y2="50" stroke="#4A7DBC" stroke-width="0.3" />
+      <line x1="0" y1="55" x2="300" y2="55" stroke="#4A7DBC" stroke-width="0.3" />
+    </g>
+    
+    <!-- Camada intermediária - argila arenosa -->
+    <path d="M0,60 L300,60 L300,120 L0,120 Z" fill="rgba(245,138,52,0.10)" />
+    
+    <!-- Textura arenosa pontilhada -->
+    <g opacity="0.5">
+      <circle cx="10" cy="70" r="0.5" fill="#4A7DBC"/>
+      <circle cx="20" cy="75" r="0.5" fill="#4A7DBC"/>
+      <circle cx="30" cy="68" r="0.5" fill="#4A7DBC"/>
+      <circle cx="40" cy="80" r="0.5" fill="#4A7DBC"/>
+      <circle cx="50" cy="72" r="0.5" fill="#4A7DBC"/>
+      <circle cx="60" cy="78" r="0.5" fill="#4A7DBC"/>
+      <circle cx="70" cy="70" r="0.5" fill="#4A7DBC"/>
+      <circle cx="80" cy="75" r="0.5" fill="#4A7DBC"/>
+      <circle cx="90" cy="68" r="0.5" fill="#4A7DBC"/>
+      <circle cx="100" cy="80" r="0.5" fill="#4A7DBC"/>
+      <circle cx="110" cy="72" r="0.5" fill="#4A7DBC"/>
+      <circle cx="120" cy="78" r="0.5" fill="#4A7DBC"/>
+      <circle cx="130" cy="70" r="0.5" fill="#4A7DBC"/>
+      <circle cx="140" cy="75" r="0.5" fill="#4A7DBC"/>
+      <circle cx="150" cy="68" r="0.5" fill="#4A7DBC"/>
+      <circle cx="160" cy="80" r="0.5" fill="#4A7DBC"/>
+      <circle cx="170" cy="72" r="0.5" fill="#4A7DBC"/>
+      <circle cx="180" cy="78" r="0.5" fill="#4A7DBC"/>
+      <circle cx="190" cy="70" r="0.5" fill="#4A7DBC"/>
+      <circle cx="200" cy="75" r="0.5" fill="#4A7DBC"/>
+      <circle cx="210" cy="68" r="0.5" fill="#4A7DBC"/>
+      <circle cx="220" cy="80" r="0.5" fill="#4A7DBC"/>
+      <circle cx="230" cy="72" r="0.5" fill="#4A7DBC"/>
+      <circle cx="240" cy="78" r="0.5" fill="#4A7DBC"/>
+      <circle cx="250" cy="70" r="0.5" fill="#4A7DBC"/>
+      <circle cx="260" cy="75" r="0.5" fill="#4A7DBC"/>
+      <circle cx="270" cy="68" r="0.5" fill="#4A7DBC"/>
+      <circle cx="280" cy="80" r="0.5" fill="#4A7DBC"/>
+      <circle cx="290" cy="72" r="0.5" fill="#4A7DBC"/>
+      
+      <!-- Segunda linha de pontos -->
+      <circle cx="15" cy="90" r="0.5" fill="#4A7DBC"/>
+      <circle cx="25" cy="95" r="0.5" fill="#4A7DBC"/>
+      <circle cx="35" cy="88" r="0.5" fill="#4A7DBC"/>
+      <circle cx="45" cy="100" r="0.5" fill="#4A7DBC"/>
+      <circle cx="55" cy="92" r="0.5" fill="#4A7DBC"/>
+      <circle cx="65" cy="98" r="0.5" fill="#4A7DBC"/>
+      <circle cx="75" cy="90" r="0.5" fill="#4A7DBC"/>
+      <circle cx="85" cy="95" r="0.5" fill="#4A7DBC"/>
+      <circle cx="95" cy="88" r="0.5" fill="#4A7DBC"/>
+      <circle cx="105" cy="100" r="0.5" fill="#4A7DBC"/>
+      <circle cx="115" cy="92" r="0.5" fill="#4A7DBC"/>
+      <circle cx="125" cy="98" r="0.5" fill="#4A7DBC"/>
+      <circle cx="135" cy="90" r="0.5" fill="#4A7DBC"/>
+      <circle cx="145" cy="95" r="0.5" fill="#4A7DBC"/>
+      <circle cx="155" cy="88" r="0.5" fill="#4A7DBC"/>
+      <circle cx="165" cy="100" r="0.5" fill="#4A7DBC"/>
+      <circle cx="175" cy="92" r="0.5" fill="#4A7DBC"/>
+      <circle cx="185" cy="98" r="0.5" fill="#4A7DBC"/>
+      <circle cx="195" cy="90" r="0.5" fill="#4A7DBC"/>
+      <circle cx="205" cy="95" r="0.5" fill="#4A7DBC"/>
+      <circle cx="215" cy="88" r="0.5" fill="#4A7DBC"/>
+      <circle cx="225" cy="100" r="0.5" fill="#4A7DBC"/>
+      <circle cx="235" cy="92" r="0.5" fill="#4A7DBC"/>
+      <circle cx="245" cy="98" r="0.5" fill="#4A7DBC"/>
+      <circle cx="255" cy="90" r="0.5" fill="#4A7DBC"/>
+      <circle cx="265" cy="95" r="0.5" fill="#4A7DBC"/>
+      <circle cx="275" cy="88" r="0.5" fill="#4A7DBC"/>
+      <circle cx="285" cy="100" r="0.5" fill="#4A7DBC"/>
+      <circle cx="295" cy="92" r="0.5" fill="#4A7DBC"/>
+    </g>
+    
+    <!-- Camada inferior - impenetrável -->
+    <path d="M0,120 L300,120 L300,200 L0,200 Z" fill="rgba(74,125,188,0.15)" />
+    
+    <!-- Símbolo de impenetrável (hachuras cruzadas) -->
+    <g stroke="#4A7DBC" stroke-width="0.3" opacity="0.4">
+      <line x1="0" y1="125" x2="300" y2="195" />
+      <line x1="0" y1="145" x2="300" y2="215" />
+      <line x1="0" y1="165" x2="300" y2="235" />
+      <line x1="0" y1="185" x2="300" y2="255" />
+      
+      <line x1="0" y1="195" x2="300" y2="125" />
+      <line x1="0" y1="175" x2="300" y2="105" />
+      <line x1="0" y1="155" x2="300" y2="85" />
+      <line x1="0" y1="135" x2="300" y2="65" />
+    </g>
+  </g>
+  
+  <!-- Grid técnico e marcações -->
+  <g stroke="#4A7DBC" stroke-width="0.25" opacity="0.7">
+    <!-- Linha vertical principal (eixo) -->
+    <line x1="25" y1="0" x2="25" y2="200" stroke-width="0.5"/>
+    
+    <!-- Linhas horizontais de profundidade -->
+    <line x1="20" y1="20" x2="300" y2="20" />
+    <line x1="20" y1="60" x2="300" y2="60" />
+    <line x1="20" y1="120" x2="300" y2="120" />
+    <line x1="15" y1="160" x2="300" y2="160" />
+    
+    <!-- Marcações de régua vertical -->
+    <line x1="20" y1="20" x2="30" y2="20" stroke-width="0.5"/>
+    <line x1="20" y1="60" x2="30" y2="60" stroke-width="0.5"/>
+    <line x1="20" y1="120" x2="30" y2="120" stroke-width="0.5"/>
+    <line x1="20" y1="160" x2="30" y2="160" stroke-width="0.5"/>
+  </g>
+  
+  <!-- Indicadores técnicos -->
+  <g font-family="monospace" font-size="6" fill="#4A7DBC">
+    <!-- Profundidades -->
+    <text x="5" y="22">±0.0m</text>
+    <text x="5" y="62">-2.1m</text>
+    <text x="5" y="122">-4.8m</text>
+    <text x="5" y="162">-7.5m</text>
+    
+    <!-- SPT valores -->
+    <text x="35" y="22">SPT: 2</text>
+    <text x="35" y="62">SPT: 8</text>
+    <text x="35" y="122">SPT: 32</text>
+    <text x="35" y="162">SPT: 50+</text>
+    
+    <!-- Título da sondagem -->
+    <text x="200" y="15" font-size="8" fill="#F58A34">SONDAGEM SP-04</text>
+    <text x="200" y="25" font-size="6" fill="#F58A34">COORD: E458.32 N785.15</text>
+  </g>
+</svg>

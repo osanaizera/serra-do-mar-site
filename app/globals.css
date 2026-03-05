@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 /* ============================================================
    Serra do Mar Engenharia — Identidade Visual Completa
    Arquétipos: Sage 88% + Ruler 70%
@@ -6,27 +8,22 @@
    ============================================================ */
 
 /* ============================================================
-   Google Fonts — Montserrat + Inter
-   ============================================================ */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
-
-/* ============================================================
    Design Tokens — Paleta Serra do Mar
    ============================================================ */
 :root {
   /* === PALETA DA MARCA === */
-  --primary: #1B2B48;          /* Azul técnico profundo */
-  --primary-light: #2E5B86;    /* Azul intermediário */
-  --primary-dark: #0F172A;     /* Azul escuro / neutral */
-  --secondary: #368967;        /* Verde engenharia (2-7%) */
-  --secondary-dark: #2A6B53;   /* Verde escuro */
-  --accent: #F58A34;           /* Laranja acento (1-3% APENAS) */
-  --neutral: #0F172A;          /* Azul escuro neutro */
-  --background: #0B1220;       /* Background base */
-  --text: #F3F4F5;             /* Texto principal */
-  --text-muted: #D1D5DA;       /* Texto secundário */
-  --text-dim: rgba(243, 244, 245, 0.5); /* Texto terciário */
-  --blue-mid: #4A7DBC;         /* Azul médio para destaques */
+  --primary: #1B2B48;
+  --primary-light: #2E5B86;
+  --primary-dark: #0F172A;
+  --secondary: #368967;
+  --secondary-dark: #2A6B53;
+  --accent: #F58A34;
+  --neutral: #0F172A;
+  --background: #0B1220;
+  --text: #F3F4F5;
+  --text-muted: #D1D5DA;
+  --text-dim: rgba(243, 244, 245, 0.5);
+  --blue-mid: #4A7DBC;
 
   /* Funcionais */
   --bg: var(--background);
@@ -72,7 +69,7 @@ a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; }
 
 /* ============================================================
-   Typography — Editorial hierarchy (Sage + Ruler)
+   Typography — Editorial hierarchy
    ============================================================ */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", system-ui, sans-serif;
@@ -122,10 +119,7 @@ p {
 .hero-bg img,
 .project-card-image img,
 .full-bleed img {
-  filter:
-    brightness(0.9)
-    contrast(1.65)
-    saturate(0.35);
+  filter: brightness(0.9) contrast(1.65) saturate(0.35);
 }
 
 /* ============================================================
@@ -140,7 +134,7 @@ p {
 }
 
 /* ============================================================
-   Header & Nav — dark, sticky
+   Header & Nav
    ============================================================ */
 .header {
   position: sticky;
@@ -210,7 +204,7 @@ p {
 .nav-links a:hover::after { transform: scaleX(1); transform-origin: left; }
 
 /* ============================================================
-   Hamburger — Mobile Nav (dark)
+   Hamburger
    ============================================================ */
 .hamburger {
   display: none;
@@ -272,7 +266,6 @@ p {
 }
 
 .mobile-menu a:hover { color: var(--secondary); }
-
 .mobile-menu .btn { margin-top: 1rem; }
 
 @media (max-width: 900px) {
@@ -283,7 +276,7 @@ p {
 }
 
 /* ============================================================
-   Buttons — Sage + Ruler: sóbrio, preciso
+   Buttons
    ============================================================ */
 .btn {
   padding: 0.85rem 2rem;
@@ -300,7 +293,6 @@ p {
   letter-spacing: 0.01em;
 }
 
-/* CTA principal — LARANJA (1-3% do site) */
 .btn.primary {
   background: var(--accent);
   color: #ffffff;
@@ -340,7 +332,7 @@ p {
 }
 
 /* ============================================================
-   HERO — Homepage: Full-screen photo + editorial headline
+   HERO
    ============================================================ */
 .hero {
   position: relative;
@@ -364,7 +356,6 @@ p {
   object-position: center;
 }
 
-/* Dark overlay for text readability */
 .hero-bg::after {
   content: "";
   position: absolute;
@@ -378,7 +369,6 @@ p {
   z-index: 1;
 }
 
-/* SVG texture as subtle overlay */
 .hero-texture {
   position: absolute;
   inset: 0;
@@ -420,7 +410,6 @@ p {
   flex-wrap: wrap;
 }
 
-/* Hero buttons — accent CTA + ghost */
 .hero .btn.primary {
   background: var(--accent);
   color: #ffffff;
@@ -445,7 +434,7 @@ p {
 }
 
 /* ============================================================
-   Subpage Hero — dark, editorial
+   Subpage Hero
    ============================================================ */
 .hero-sub {
   position: relative;
@@ -485,7 +474,7 @@ p {
 }
 
 /* ============================================================
-   Sections — GENEROUS whitespace (dark)
+   Sections
    ============================================================ */
 .section {
   padding: var(--section-pad) 0;
@@ -499,7 +488,6 @@ p {
   margin-bottom: 1.5rem;
 }
 
-/* Center intro text pattern */
 .section-intro {
   max-width: var(--content-max);
   text-align: center;
@@ -536,7 +524,7 @@ p {
 }
 
 /* ============================================================
-   Cards — dark, subtle borders
+   Cards
    ============================================================ */
 .card {
   background: var(--primary);
@@ -564,7 +552,7 @@ p {
   margin-bottom: 0;
 }
 
-/* Project cards — image-first, dark */
+/* Project cards */
 .project-card {
   background: var(--primary);
   border: 1px solid var(--border);
@@ -618,7 +606,7 @@ p {
   letter-spacing: 0.06em;
 }
 
-/* Service cards — text-only, dark borders */
+/* Service cards */
 .service-card {
   padding: var(--card-pad);
   border-top: 1px solid var(--border);
@@ -641,7 +629,7 @@ p {
 }
 
 /* ============================================================
-   Stats — Big numbers, editorial impact
+   Stats
    ============================================================ */
 .stats-grid {
   display: grid;
@@ -675,7 +663,7 @@ p {
 }
 
 /* ============================================================
-   Pull Quote — editorial element (green accent line)
+   Pull Quote
    ============================================================ */
 .pull-quote {
   border-left: 2px solid var(--secondary);
@@ -700,7 +688,7 @@ p {
 }
 
 /* ============================================================
-   Split Layout — asymmetric
+   Split Layout
    ============================================================ */
 .split {
   display: grid;
@@ -710,7 +698,7 @@ p {
 }
 
 /* ============================================================
-   CTA Section — dark with accent CTA
+   CTA Section
    ============================================================ */
 .cta-section {
   background: var(--primary);
@@ -744,7 +732,6 @@ p {
   box-shadow: 0 4px 20px rgba(245, 138, 52, 0.3);
 }
 
-/* Inline CTA card */
 .cta-card {
   background: var(--primary);
   border: 1px solid var(--border);
@@ -762,7 +749,7 @@ p {
 }
 
 /* ============================================================
-   Timeline — refined (green dots)
+   Timeline
    ============================================================ */
 .timeline {
   border-left: 1px solid var(--border);
@@ -801,7 +788,7 @@ p {
 }
 
 /* ============================================================
-   Team (dark cards)
+   Team
    ============================================================ */
 .team-grid {
   display: grid;
@@ -862,7 +849,7 @@ p {
 }
 
 /* ============================================================
-   Contact Form — dark
+   Contact Form
    ============================================================ */
 .form {
   display: grid;
@@ -933,7 +920,7 @@ select option {
 }
 
 /* ============================================================
-   Footer — dark, texture overlay
+   Footer
    ============================================================ */
 .footer {
   position: relative;
@@ -946,7 +933,7 @@ select option {
 .footer-texture {
   position: absolute;
   inset: 0;
-  background: url("assets/texture-topographic-contour.svg") center/cover no-repeat;
+  background: url("/assets/texture-topographic-contour.svg") center/cover no-repeat;
   opacity: 0.03;
   pointer-events: none;
 }
@@ -1016,7 +1003,7 @@ select option {
 .spacer-sm { height: 3rem; }
 
 /* ============================================================
-   Tags & Badges (green accent)
+   Tags & Badges
    ============================================================ */
 .tag {
   display: inline-block;
@@ -1039,7 +1026,7 @@ select option {
 }
 
 /* ============================================================
-   Layer Graphic — Stratigraphy visual (brand identity)
+   Layer Graphic
    ============================================================ */
 .layer-graphic {
   border-radius: 6px;
@@ -1089,9 +1076,8 @@ select option {
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-/* Soil strata colors using brand palette */
 .layer:nth-child(1) {
-  background: rgba(245, 138, 52, 0.6);  /* accent earth */
+  background: rgba(245, 138, 52, 0.6);
   width: 100%;
 }
 
@@ -1110,7 +1096,6 @@ select option {
   width: 55%;
 }
 
-/* NSPT labels */
 .layer::after {
   position: absolute;
   font-family: "Inter", monospace;
@@ -1159,9 +1144,6 @@ select option {
   transform: translateY(0);
 }
 
-/* ============================================================
-   Animations
-   ============================================================ */
 @keyframes fadeUp {
   0% { opacity: 0; transform: translateY(20px); }
   100% { opacity: 1; transform: translateY(0); }
@@ -1194,7 +1176,7 @@ select option {
 }
 
 /* ============================================================
-   Section divider (green)
+   Section divider
    ============================================================ */
 .divider {
   width: 48px;
@@ -1205,10 +1187,152 @@ select option {
 }
 
 /* ============================================================
+   SETORES — Cards com prioridade visual
+   ============================================================ */
+.sector-card {
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 3rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.sector-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--accent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sector-card:hover {
+  border-color: var(--border-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.sector-card:hover::before {
+  opacity: 1;
+}
+
+.sector-card.priority-1,
+.sector-card.priority-2 {
+  background: rgba(27, 43, 72, 0.3);
+  border-width: 2px;
+}
+
+.sector-card.priority-1 .sector-number,
+.sector-card.priority-2 .sector-number {
+  background: linear-gradient(135deg, var(--accent), var(--secondary));
+  font-weight: 700;
+}
+
+.sector-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.sector-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  background: var(--primary);
+  color: var(--text);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.sector-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.sector-content {
+  padding-left: 5rem;
+}
+
+.sector-description {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.sector-services h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.sector-services ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.sector-services li {
+  padding-left: 1.5rem;
+  position: relative;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.sector-services li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+/* ============================================================
+   Blog Content (Markdown rendered)
+   ============================================================ */
+.blog-content h1 { font-size: 2.5rem; margin: 2rem 0 1rem; }
+.blog-content h2 { font-size: 2rem; margin: 2rem 0 1rem; font-weight: 600; }
+.blog-content h3 { font-size: 1.5rem; margin: 1.5rem 0 0.75rem; }
+.blog-content p { line-height: 1.7; margin: 1rem 0; color: var(--text-muted); }
+.blog-content ul, .blog-content ol { padding-left: 1.5rem; margin: 1rem 0; color: var(--text-muted); }
+.blog-content li { margin-bottom: 0.5rem; }
+.blog-content pre { background: rgba(27, 43, 72, 0.5); color: var(--text); padding: 1rem; overflow-x: auto; border-radius: 6px; }
+.blog-content code { font-size: 0.9em; }
+.blog-content img { max-width: 100%; height: auto; margin: 1.5rem 0; border-radius: 6px; }
+.blog-content blockquote {
+  border-left: 3px solid var(--secondary);
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+  color: var(--text-muted);
+  font-style: italic;
+}
+.blog-content a { color: var(--secondary); text-decoration: underline; }
+.blog-content a:hover { color: var(--accent); }
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 
-/* Tablet */
 @media (max-width: 1024px) {
   :root {
     --section-pad: 8rem;
@@ -1224,7 +1348,6 @@ select option {
   }
 }
 
-/* Tablet small */
 @media (max-width: 900px) {
   :root {
     --section-pad: 7rem;
@@ -1252,7 +1375,30 @@ select option {
   }
 }
 
-/* Mobile */
+@media (max-width: 768px) {
+  .sector-card {
+    padding: 2rem;
+  }
+
+  .sector-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .sector-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .sector-content {
+    padding-left: 0;
+  }
+
+  .sector-description {
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 600px) {
   :root {
     --section-pad: 6rem;
@@ -1341,151 +1487,4 @@ select option {
   }
 
   .layer-graphic { display: none; }
-}
-
-/* ============================================================
-   SETORES — Cards com prioridade visual
-   ============================================================ */
-.sector-card {
-  background: rgba(15, 23, 42, 0.5);
-  border: 1px solid var(--border);
-  border-radius: 0.5rem;
-  padding: 3rem;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.sector-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background: var(--accent);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.sector-card:hover {
-  border-color: var(--border-light);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-}
-
-.sector-card:hover::before {
-  opacity: 1;
-}
-
-/* Destaque por prioridade */
-.sector-card.priority-1,
-.sector-card.priority-2 {
-  background: rgba(27, 43, 72, 0.3);
-  border-width: 2px;
-}
-
-.sector-card.priority-1 .sector-number,
-.sector-card.priority-2 .sector-number {
-  background: linear-gradient(135deg, var(--accent), var(--secondary));
-  font-weight: 700;
-}
-
-.sector-header {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.sector-number {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 3.5rem;
-  height: 3.5rem;
-  background: var(--primary);
-  color: var(--text);
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 600;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-.sector-header h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin: 0;
-  color: var(--text);
-  line-height: 1.2;
-}
-
-.sector-content {
-  padding-left: 5rem;
-}
-
-.sector-description {
-  font-size: 1.125rem;
-  line-height: 1.8;
-  color: var(--text-muted);
-  margin-bottom: 2rem;
-}
-
-.sector-services h4 {
-  font-family: var(--font-heading);
-  font-size: 1rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--accent);
-  margin-bottom: 1rem;
-}
-
-.sector-services ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: 0.75rem;
-}
-
-.sector-services li {
-  padding-left: 1.5rem;
-  position: relative;
-  color: var(--text-muted);
-  line-height: 1.6;
-}
-
-.sector-services li::before {
-  content: '→';
-  position: absolute;
-  left: 0;
-  color: var(--secondary);
-  font-weight: 600;
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-  .sector-card {
-    padding: 2rem;
-  }
-
-  .sector-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-
-  .sector-header h2 {
-    font-size: 1.5rem;
-  }
-
-  .sector-content {
-    padding-left: 0;
-  }
-
-  .sector-description {
-    font-size: 1rem;
-  }
 }

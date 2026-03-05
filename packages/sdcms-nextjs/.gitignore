@@ -1,0 +1,5 @@
+# Override root .gitignore for dist/
+# The dist/ folder must be committed because salesdrive-lp
+# uses file: dependency and needs pre-built artifacts.
+!dist/
+node_modules/

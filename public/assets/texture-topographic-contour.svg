@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <!-- Textura 4: Curvas de Nível Topográficas
+       Inspiração: Levantamento topográfico + curvas de nível com gradiente de elevação
+       Uso: Footer, seções intermediárias, backgrounds secundários
+       Palette: tons de terra sutis + linhas técnicas azuis -->
+  <defs>
+    <linearGradient id="tc-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B1220"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background base -->
+  <rect width="1200" height="800" fill="url(#tc-bg)"/>
+  
+  <!-- CURVAS DE NÍVEL MESTRAS (a cada 5m) — mais visíveis -->
+  <g fill="none" stroke="rgba(74,125,188,0.08)" stroke-width="0.8">
+    <path d="M-50,100 C100,80 250,120 400,90 C550,60 700,130 850,100 C1000,70 1100,110 1250,85"/>
+    <path d="M-50,250 C80,230 200,270 380,240 C560,210 700,280 880,250 C1060,220 1140,260 1250,235"/>
+    <path d="M-50,400 C120,380 280,420 440,390 C600,360 740,430 900,400 C1060,370 1150,410 1250,385"/>
+    <path d="M-50,550 C90,530 240,570 420,540 C600,510 760,580 940,550 C1120,520 1180,560 1250,535"/>
+    <path d="M-50,700 C110,680 260,720 430,690 C600,660 750,730 920,700 C1090,670 1170,710 1250,685"/>
+  </g>
+  
+  <!-- CURVAS DE NÍVEL INTERMEDIÁRIAS (a cada 1m) — mais sutis -->
+  <g fill="none" stroke="rgba(74,125,188,0.04)" stroke-width="0.4">
+    <path d="M-50,130 C90,115 220,145 370,120 C520,95 680,150 830,125 C980,100 1090,135 1250,115"/>
+    <path d="M-50,160 C110,148 250,168 410,148 C570,128 710,172 860,152 C1010,132 1110,160 1250,145"/>
+    <path d="M-50,190 C80,175 230,195 380,178 C530,161 690,200 840,180 C990,160 1080,188 1250,173"/>
+    <path d="M-50,220 C100,208 240,228 400,210 C560,192 720,235 880,215 C1040,195 1130,218 1250,203"/>
+    
+    <path d="M-50,280 C70,265 190,295 350,270 C510,245 680,300 840,275 C1000,250 1100,280 1250,260"/>
+    <path d="M-50,310 C100,298 250,318 410,300 C570,282 720,325 880,305 C1040,285 1130,308 1250,293"/>
+    <path d="M-50,340 C80,325 220,345 380,328 C540,311 700,355 860,335 C1020,315 1110,338 1250,323"/>
+    <path d="M-50,370 C110,358 260,378 430,360 C600,342 760,385 920,365 C1080,345 1150,368 1250,353"/>
+    
+    <path d="M-50,430 C90,415 230,445 400,420 C570,395 730,450 890,425 C1050,400 1140,430 1250,410"/>
+    <path d="M-50,460 C100,448 250,468 410,450 C570,432 720,475 880,455 C1040,435 1130,458 1250,443"/>
+    <path d="M-50,490 C80,475 220,495 380,478 C540,461 700,505 860,485 C1020,465 1100,488 1250,473"/>
+    <path d="M-50,520 C110,508 260,528 430,510 C600,492 760,535 920,515 C1080,495 1150,518 1250,503"/>
+    
+    <path d="M-50,580 C90,565 240,595 420,570 C600,545 760,600 940,575 C1120,550 1180,580 1250,560"/>
+    <path d="M-50,610 C100,598 250,618 410,600 C570,582 720,625 880,605 C1040,585 1130,608 1250,593"/>
+    <path d="M-50,640 C80,625 220,645 380,628 C540,611 700,655 860,635 C1020,615 1100,638 1250,623"/>
+    <path d="M-50,670 C110,658 260,678 430,660 C600,642 760,685 920,665 C1080,645 1150,668 1250,653"/>
+  </g>
+  
+  <!-- COTAS DE ELEVAÇÃO — marcadores numéricos nas curvas mestras -->
+  <g font-family="monospace" font-size="6" fill="rgba(74,125,188,0.10)">
+    <text x="500" y="97" transform="rotate(-3,500,97)">820</text>
+    <text x="850" y="103" transform="rotate(2,850,103)">820</text>
+    <text x="300" y="247" transform="rotate(-2,300,247)">815</text>
+    <text x="750" y="253" transform="rotate(1,750,253)">815</text>
+    <text x="550" y="397" transform="rotate(-1,550,397)">810</text>
+    <text x="950" y="403" transform="rotate(2,950,403)">810</text>
+    <text x="400" y="547" transform="rotate(-2,400,547)">805</text>
+    <text x="800" y="553" transform="rotate(1,800,553)">805</text>
+    <text x="650" y="697" transform="rotate(-1,650,697)">800</text>
+    <text x="1050" y="703" transform="rotate(2,1050,703)">800</text>
+  </g>
+  
+  <!-- PONTOS COTADOS — marcos topográficos -->
+  <g opacity="0.10">
+    <g transform="translate(200,180)">
+      <line x1="-4" y1="0" x2="4" y2="0" stroke="rgba(245,138,52,0.6)" stroke-width="0.8"/>
+      <line x1="0" y1="-4" x2="0" y2="4" stroke="rgba(245,138,52,0.6)" stroke-width="0.8"/>
+      <text x="6" y="3" font-family="monospace" font-size="5" fill="rgba(245,138,52,0.5)">818.3</text>
+    </g>
+    <g transform="translate(600,350)">
+      <line x1="-4" y1="0" x2="4" y2="0" stroke="rgba(245,138,52,0.6)" stroke-width="0.8"/>
+      <line x1="0" y1="-4" x2="0" y2="4" stroke="rgba(245,138,52,0.6)" stroke-width="0.8"/>
+      <text x="6" y="3" font-family="monospace" font-size="5" fill="rgba(245,138,52,0.5)">812.7</text>
+    </g>
+    <g transform="translate(950,500)">
+      <line x1="-4" y1="0" x2="4" y2="0" stroke="rgba(245,138,52,0.6)" stroke-width="0.8"/>
+      <line x1="0" y1="-4" x2="0" y2="4" stroke="rgba(245,138,52,0.6)" stroke-width="0.8"/>
+      <text x="6" y="3" font-family="monospace" font-size="5" fill="rgba(245,138,52,0.5)">807.1</text>
+    </g>
+  </g>
+  
+  <!-- ESCALA GRÁFICA — canto inferior direito -->
+  <g transform="translate(1050,760)" opacity="0.08">
+    <line x1="0" y1="0" x2="100" y2="0" stroke="rgba(74,125,188,0.8)" stroke-width="1"/>
+    <line x1="0" y1="-3" x2="0" y2="3" stroke="rgba(74,125,188,0.8)" stroke-width="0.8"/>
+    <line x1="50" y1="-2" x2="50" y2="2" stroke="rgba(74,125,188,0.8)" stroke-width="0.6"/>
+    <line x1="100" y1="-3" x2="100" y2="3" stroke="rgba(74,125,188,0.8)" stroke-width="0.8"/>
+    <text x="0" y="10" font-family="monospace" font-size="5" fill="rgba(74,125,188,0.6)">0</text>
+    <text x="47" y="10" font-family="monospace" font-size="5" fill="rgba(74,125,188,0.6)">50</text>
+    <text x="93" y="10" font-family="monospace" font-size="5" fill="rgba(74,125,188,0.6)">100m</text>
+  </g>
+</svg>

@@ -1,0 +1,1 @@
+export { SDCMSJsonLd } from "./SDCMSJsonLd";
